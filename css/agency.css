@@ -347,8 +347,11 @@ section h3.section-subheading {
 }
 
 .service-heading {
-    margin: 15px 0;
-    text-transform: none;
+	text-transform: none;
+	margin-top: 15px;
+	margin-right: 0;
+	margin-bottom: 15px;
+	margin-left: 0;
 }
 
 #portfolio .portfolio-item {

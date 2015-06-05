@@ -14,8 +14,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">How well are you doing?</h2>
+                    <h3 class="section-subheading text-muted">Looking for something?</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -24,26 +24,30 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <img src="img/tribesicon.png" width="137" height="117" alt="tribe"> <span class="fa-stack fa-4x">
+                    <img src="img/tribesicon.png" width="257" height="181" alt="tribe"> 
                     </div>
                   <h4 class="service-heading">Tribes</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Find out what other tribes are out there! See how you are doing with your tribe compared to other tribes, or if you are looking for a tribe then check if anyone is recruiting!</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Leaderboards</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <div class="icons">
+                    <img src="img/leadericons.png" width="257" height="181" alt="tribe"> 
+                    </div>
+                  <h4 class="service-heading">Leaderboards</h4>
+                    <p class="text-muted">Look at the tribe leaderboards, is your tribe able to compete with the other big tribes out there?</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
+                   <div class="icons3">
+                    <img src="img/statsicon.png" width="257" height="181" alt="tribe">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Stats</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                  </div>
+                   <h4 class="service-heading">Stats</h4>
+                    <p class="text-muted">Check your minecraft ranking with the other players on this site and your friends! (Are your statistics not as high as they should be? Maybe the server you are playing on doesn't have the MineTribe plugin yet!)</p>
                 </div>
             </div>
         </div>

@@ -1015,6 +1015,9 @@ select {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 :after, :before {
 	-webkit-box-sizing: border-box;
@@ -5629,7 +5632,14 @@ td.visible-print, th.visible-print {
 .container .row.text-center .col-md-4 .icons {
 }
 .container .row.text-center .col-md-4 .icons img {
-	margin-left: auto;
 	display: block;
 	margin-right: auto;
+	margin-left: auto;
+}
+.container .row.text-center .col-md-4 .icons2 img {
+	display: block;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
 }
