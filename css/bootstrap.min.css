@@ -1058,7 +1058,7 @@ figure {
 img {
 	vertical-align: top;
 	float: none;
-	width: 120px;
+	width: 1000px;
 	position: relative;
 	left: 70px;
 	right: 50px;
@@ -5630,4 +5630,7 @@ td.visible-print, th.visible-print {
 .hidden-print {
 	display: none!important
 }
+}
+.container text-center icons {
+	width:120px;
 }
