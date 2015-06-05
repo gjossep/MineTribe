@@ -63,7 +63,9 @@ sub {
 	bottom: -.25em
 }
 img {
-	border: 0
+	border: 0;
+	position: relative;
+	margin-left: 115px;
 }
 svg:not(:root) {
 	overflow: hidden
@@ -1016,7 +1018,7 @@ select {
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 :after, :before {
 	-webkit-box-sizing: border-box;
@@ -1056,12 +1058,6 @@ figure {
 	margin: 0
 }
 img {
-	vertical-align: top;
-	float: none;
-	width: 1000px;
-	position: relative;
-	left: 70px;
-	right: 50px;
 }
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
 	display: block;
@@ -5631,6 +5627,6 @@ td.visible-print, th.visible-print {
 	display: none!important
 }
 }
-.container text-center icons {
-	width:120px;
+.container .intro-text img {
+	width: 1000px;
 }
