@@ -62,11 +62,7 @@ sup {
 sub {
 	bottom: -.25em
 }
-img {
-	border: 0;
-	position: relative;
-	margin-left: 115px;
-}
+
 svg:not(:root) {
 	overflow: hidden
 }
@@ -5629,4 +5625,11 @@ td.visible-print, th.visible-print {
 }
 .container .intro-text img {
 	width: 1000px;
+}
+.container .row.text-center .col-md-4 .icons {
+}
+.container .row.text-center .col-md-4 .icons img {
+	margin-left: auto;
+	display: block;
+	margin-right: auto;
 }
