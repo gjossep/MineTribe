@@ -171,7 +171,7 @@ foreach ($successes as $success){
 if (count($errors) > 0){
     apiReturnError($ajax, SITE_ROOT . "login.php");
 } else {
-    apiReturnSuccess($ajax, ACCOUNT_ROOT);
+    apiReturnSuccess($ajax, SITE_ROOT);
 }
 
 ?>
