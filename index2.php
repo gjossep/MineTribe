@@ -62,7 +62,7 @@ if(isUserLoggedIn()) {
         <p class="lead">A secure, modern user management system based on UserCake, jQuery, and Bootstrap.</p>
 		<div class="row">
 			<div class="col-sm-12">
-			  <a href="login.php" class="btn btn-success" role="button" value='Login'>Login</a>
+			  <a href="login2.php" class="btn btn-success" role="button" value='Login'>Login</a>
 			</div>
         </div>
         <div class="jumbotron-links">
