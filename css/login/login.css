@@ -6,7 +6,7 @@
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 10px;
+	padding: 0px;
 }
 .loginForm input[type=text] {
 	height: 30px;
@@ -42,7 +42,7 @@
 .loginForm input[type=submit] {
 	width: 330px;
 	height: 35px;
-	background: #3F6;
+	background: #4AD571;
 	border: 1px solid #fff;
 	cursor: pointer;
 	border-radius: 5px;
@@ -82,5 +82,5 @@
 	width: 370px;
 	height: 190px;
 	left: auto;
-	background-color: rgb(245,245,245);
+	background-color: rgb(202,246,255);
 }

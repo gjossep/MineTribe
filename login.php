@@ -40,9 +40,11 @@ if(isUserLoggedIn()) {
      	<div class="formHolder">
         <div class="loginForm">
           <form id="login" action="api/process_login.php" method="post">
-            <input type="text" name="log" id="user" class="input" placeholder="Username">
+          <h4> Username</h4>
+            <input type="text" name="log" id="user" class="input" placeholder="minecraft username">
             <br>
-            <input type="password" name="pwd" id="pass" class="input" placeholder="Password">
+            <h4>Password</h4>
+            <input type="password" name="pwd" id="pass" class="input" placeholder="website password">
             <br>
             <input type="submit" name="wp-submit" id="" value="Login">
           </form>
