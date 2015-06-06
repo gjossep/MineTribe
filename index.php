@@ -253,11 +253,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                    <h4>Community</h4>
+                                    <h4 class="subheading">Help us grow!</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">MineTribe is a rapidly growing community but it needs the help of the community! To make the statistics and tribes more competitive you need to get the MineTribe plugin on the servers you play. Otherwise your Tribe will struggle to grow if the servers you play on don't have the plugin!.</p>
                                 </div>
                             </div>
                         </li>
