@@ -104,8 +104,7 @@ body {
 }
 
 #signup .inputs {
-	margin-top: 25px;
-	float: right;
+    margin-top: 25px;
 }
 
 #signup .inputs label {
@@ -214,10 +213,5 @@ input:-moz-placeholder {
         from(#a4b0cb),
         to(#b9c5dd));
 }
-.login #signup .inputs .gender {
-	display:inline-block;
-}
-.login #signup .inputs .gender input {
-	display: inline;
-	text-align: center;
-}
+
+
