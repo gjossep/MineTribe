@@ -95,7 +95,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">How well are you doing?</h2>
-                    <h3 class="section-subheading text-muted">Looking for something?</h3>
+                    <h3 class="section-subheading text-muted">Looking for something? Scroll down..</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -104,7 +104,7 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <img src="img/tribesicon.png" width="257" height="181" alt="tribe"> 
+                    <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> 
                     </div>
                   <h4 class="service-heading">Tribes</h4>
                     <p class="text-muted">Find out what other tribes are out there! See how you are doing with your tribe compared to other tribes, or if you are looking for a tribe then check if anyone is recruiting!</p>
