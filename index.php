@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">How well are you doing?</h2>
+                    <h2 class="section-heading">How are you doing?</h2>
                     <h3 class="section-subheading text-muted">Looking for something? Scroll down..</h3>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> 
+                    <a href="tribe.php"<img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
                     </div>
                   <h4 class="service-heading">Tribes</h4>
                     <p class="text-muted">Find out what other tribes are out there! See how you are doing with your tribe compared to other tribes, or if you are looking for a tribe then check if anyone is recruiting!</p>
@@ -44,14 +44,14 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <img src="img/leadericons.png" width="257" height="181" alt="tribe"> 
+                    <a href="leaderboards.php"<img src="img/leadericons.png" width="257" height="181" alt="tribe"> </a>
                     </div>
                   <h4 class="service-heading">Leaderboards</h4>
                     <p class="text-muted">Look at the tribe leaderboards, is your tribe able to compete with the other big tribes out there?</p>
                 </div>
                 <div class="col-md-4">
                    <div class="icons3">
-                    <img src="img/statsicon.png" width="257" height="181" alt="tribe">
+                    <a href="stats.php"<img src="img/statsicon.png" width="257" height="181" alt="tribe"> </a>
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
@@ -77,7 +77,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="index.php" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -90,8 +90,8 @@
                         <p class="text-muted">1</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+              <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="index.php" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <a href="index.php" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -136,7 +136,7 @@
                 <div class="col-lg-12">
                     <ul class="timeline">
                         <li>
-                            <div class="timeline-image">
+                          <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
@@ -150,7 +150,7 @@
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
+                          <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
@@ -164,7 +164,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-image">
+                          <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
@@ -185,15 +185,15 @@
                                 <div class="timeline-heading">
                                     <h4>Community</h4>
                                     <h4 class="subheading">Help us grow!</h4>
-                                </div>
+                              </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">MineTribe is a rapidly growing community but it needs the help of the community! To make the statistics and tribes more competitive you need to get the MineTribe plugin on the servers you play. Otherwise your Tribe will struggle to grow if the servers you play on don't have the plugin!.</p>
                                 </div>
-                            </div>
-                        </li>
+                          </div>
+                      </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4><a href="http://www.project-mcs.byethost7.com/" title="register" target="_self">BE A PART OF OUR COMMUNITY!</a></h4>
+                          <div class="timeline-image">
+                                <h4><a href="http://www.project-mcs.byethost7.com/login.php" title="register" target="_self">BE A PART OF OUR COMMUNITY!</a></h4>
                                
                             </div>
                         </li>
@@ -208,7 +208,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3 class="section-heading">THE DEVELOPMENT TEAM</h3>
+                    <h3 class="section-heading">The Team</h3>
                     <h3 class="section-subheading text-muted">Feel free to contact us below with any questions!</h3>
                 </div>
             </div>
@@ -245,51 +245,7 @@
         </div>
     </section>
     
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Have a problem?</h2>
-                    <h3 class="section-subheading text-muted">Please be as detailed as you can so we can help you.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Minecraft Name *" id="name" required data-validation-required-message="Please enter your Minecraft name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Overall Subject *" id="phone" required data-validation-required-message="Please enter subject.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
 <?php require('phpfiles/footer.php'); ?>
 
     <!-- Portfolio Modals -->

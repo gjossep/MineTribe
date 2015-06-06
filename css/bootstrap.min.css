@@ -1019,6 +1019,8 @@ select {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
 }
 :after, :before {
 	-webkit-box-sizing: border-box;
@@ -5645,4 +5647,6 @@ td.visible-print, th.visible-print {
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
+}
+.login {
 }
