@@ -28,8 +28,20 @@
 
 <div class="login">
 
-	<h1> Login </h1>
+	<h1> <center> Login</center> </h1>
+ <div>
+        
+     <div class="loginform">
+		<form action="" method="post" class="loginform">
 
+		<input name="mcusername" id="mcusername" type="text" size="20" maxlength="16" placeholder="Username" />
+        
+        <input name="mcpassword" id="mcpassword" type="password" size="20" maxlength="16" placeholder="Password" />
+       
+	</div>
+
+
+</form>
 
 
 
