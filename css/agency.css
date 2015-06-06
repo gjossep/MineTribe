@@ -175,8 +175,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-	font-family: Helvetica Neue
-", Helvetica, Arial, cursive;
+	font-family: Helvetica Neue, Helvetica, Arial, cursive;
 	color: #fed136;
 }
 
@@ -869,4 +868,5 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
-s
+
+head {display:none;}
