@@ -31,13 +31,29 @@ if(isUserLoggedIn()) {
 
 	<body>
     <?php require('phpfiles/header.php'); ?>
+    
     <div class="login">
       <h1>
         <center>
           Login
         </center>
      </h1>
-     	<div class="formHolder">
+     
+     <form id="signup">
+
+        <div class="inputs">
+        
+            <input type="text" name="username" placeholder="Username" />
+        
+            <input type="password" name="password" placeholder="Password" />
+            
+            <input type="submit" id="submit" value="Login" />
+                    
+        </div>
+
+    </form>
+     
+     	<!--<div class="formHolder">
         <div class="loginForm">
           <form id="login" action="api/process_login.php" method="post">
           
@@ -51,7 +67,7 @@ if(isUserLoggedIn()) {
             <input type="submit" name="wp-submit" id="" value="Login">
           </form>
     	</div>
-        </div>
+        </div>-->
      </div>
     <?php require('phpfiles/footer.php'); ?>
 </body>

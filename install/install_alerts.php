@@ -29,33 +29,24 @@ THE SOFTWARE.
 
 */
 
-//Database Information
-$db_host = "gjosse.nl.mysql"; //Host address (most likely localhost)
-$db_name = "gjosse_nl"; //Name of Database
-$db_user = "gjosse_nl"; //Name of database user
-$db_pass = "bcJ7UEPx"; //Password for database user
-$db_table_prefix = "uf_"; // Change default "uf_" to something different (but still ending with an underscore) for better security
+require_once("../models/funcs.php");
 
-// All SQL queries use PDO now
-function pdoConnect(){
-	// Let this function throw a PDO exception if it cannot connect
-	global $db_host, $db_name, $db_user, $db_pass;
-	$db = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8", $db_user, $db_pass);
-	$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	return $db;
+defined("SESSION_NAME")
+    or define("SESSION_NAME", "UserFrosting");
+    
+session_name(SESSION_NAME);
+session_start();
+
+// Always a publically accessible script
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    addAlert($_POST['type'], $_POST['message']);
 }
 
-GLOBAL $errors;
-GLOBAL $successes;
-
-$errors = array();
-$successes = array();
-
-//Direct to install directory, if it exists and if $dev_env is not set to True in config.php
-if(is_dir("install/") && $dev_env != TRUE)
-{
-	header("Location: install/");
-	die();
-
+if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+    echo json_encode($_SESSION["userAlerts"]);
+    
+    // Reset alerts after they have been delivered
+    $_SESSION["userAlerts"] = array();
 }
+
+?>
