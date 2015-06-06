@@ -65,13 +65,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Information</a>
+                        <a class="page-scroll" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Development Team</a>
+                        <a class="page-scroll" href="#">Profile</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Login/Register</a>
+                        <a class="page-scroll" href="#">Tribe</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -309,7 +312,7 @@
                 </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Got any cool and good suggestions? post them on our facebook page! Or go to our bukkit pages to the MineTribe plugin</p>
+                    <p class="large text-muted">Got any cool and good suggestions? post them on our facebook page! Or go to our bukkit pages to get the MineTribe plugin.</p>
                 </div>
             </div>
         </div>
