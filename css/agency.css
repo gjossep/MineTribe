@@ -61,7 +61,7 @@ h6 {
 }
 
 .bg-light-gray {
-    background-color: #f7f7f7;
+	background-color: #FFFFFF;
 }
 
 .bg-darkest-gray {
@@ -232,7 +232,7 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
+        padding: 0px 0;
         border: 0;
         background-color: transparent;
         -webkit-transition: padding .3s;
@@ -633,8 +633,9 @@ section h3.section-subheading {
 }
 
 .team-member {
-    margin-bottom: 50px;
-    text-align: center;
+	margin-bottom: 50px;
+	text-align: center;
+	padding-left: 0px;
 }
 
 .team-member img {
