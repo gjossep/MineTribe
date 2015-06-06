@@ -63,7 +63,7 @@
                         <a class="page-scroll" href="#team">Development Team</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Login/Register</a>
                     </li>
                 </ul>
             </div>
@@ -281,7 +281,7 @@
                         <h4>Otto</h4>
                         <p class="text-muted">Sanchezdebeast</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://www.facebook.com/minetribeofficial/timeline"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/minetribeofficial/timeline" targe="_blank"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
