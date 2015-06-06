@@ -1,13 +1,86 @@
-@charset "UTF-8";
-/* CSS Document */
-
-.loginform {
-	
-	
+.loginForm {
+	position: relative;
+	height: 150px;
+	width: 350px;
+	z-index: 2;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
 }
-.loginform input {
-	padding-top: 5px;
-	padding-bottom: 5px;
+.loginForm input[type=text] {
+	height: 30px;
+	border: 1px solid rgba(255,255,255,1);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	
+	border: 1px solid rgba(0,0,0,0.9);
+	color: #333;
+	width: 330px;
+}
+.loginForm input[type=password] {
+	width: 330px;
+	height: 30px;
+
+	border: 1px solid rgba(255,255,255,1);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
 	margin-top: 10px;
-	margin-bottom: 10px;
+	
+	border: 1px solid rgba(0,0,0,0.9);
+	color: #333;
+
+}
+.loginForm input[type=submit] {
+	width: 330px;
+	height: 35px;
+	background: #3F6;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	color: #333;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.loginForm input[type=submit]:hover {
+	opacity: 0.8;
+}
+.loginForm input[type=submit]:active {
+	opacity: 0.6;
+}
+.loginForm input[type=text]:focus {
+	outline: none;
+	border: 1px solid rgba(0,0,0,0.9);
+	color: #333;
+	width: 330;
+}
+.loginForm input[type=password]:focus {
+	outline: none;
+	border: 1px solid rgba(0,0,0,0.9);
+	color: #333;
+	width: 330px;
+}
+.loginForm input[type=button]:focus {
+	outline: none;
+}
+
+.login .formHolder {
+	padding: 5px;
+	border: thick solid #333;
+	width: 370px;
+	height: 190px;
+	left: auto;
+	background-color: rgb(245,245,245);
 }
