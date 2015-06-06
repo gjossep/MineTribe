@@ -34,7 +34,7 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <a href="tribe.php"<img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
+                     <a href="tribe.php"> <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
                     </div>
                   <h4 class="service-heading">Tribes</h4>
                     <p class="text-muted">Find out what other tribes are out there! See how you are doing with your tribe compared to other tribes, or if you are looking for a tribe then check if anyone is recruiting!</p>
@@ -44,14 +44,14 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <a href="leaderboards.php"<img src="img/leadericons.png" width="257" height="181" alt="tribe"> </a>
+                    <a href="leader.php"><img src="img/leadericons.png" width="257" height="181" alt="tribe"></a> 
                     </div>
                   <h4 class="service-heading">Leaderboards</h4>
                     <p class="text-muted">Look at the tribe leaderboards, is your tribe able to compete with the other big tribes out there?</p>
                 </div>
                 <div class="col-md-4">
                    <div class="icons3">
-                    <a href="stats.php"<img src="img/statsicon.png" width="257" height="181" alt="tribe"> </a>
+                   <a href="stats.php"><img src="img/statsicon.png" width="257" height="181" alt="tribe"> </a>
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
