@@ -63,31 +63,18 @@ require_once("models/config.php");
 					  <div class="tab-pane active" id="about">
 					  	<h3>USERNAME</h3>
 					  	<h5>TRIBESTER</h5>
-					  	<hr></hr>
-					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault"/>
+					  	<hr></hr>                       
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
+				
 
 					  </div><!-- tab about -->
 					  
 	    			  <!-- ===== Second Tab ===== -->
 					  <div class="tab-pane" id="profile">
-					  	<h4><i class="icon-briefcase"></i> Job Experience</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-					  	<p>Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
-					  	<p class="sm">
-					  		<grey>Black Tie Corp.</grey> | June 2013 - Actual.<br/>
-					  		<grey>Other Corp.</grey> | January 2011 - May 2013.<br/>
-					  	</p>
+					  	<h3>Tribe</h3>
+					  	<h4>TRIBENAME</h4>
+					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="300" width="550"/>
 					  
-						  <h4><i class="icon-file-text-alt"></i> Education</h4>
-					  	<p class="sm">
-					  		<grey>Web Designer</grey> | Greenville University.<br/>
-					  		<grey>Business Master</grey> | Loyal Univesrity.<br/>
-					  	</p>
-					  	
-						  <h4><i class="icon-trophy"></i> Awards</h4>
-					  	<p class="sm">
-					  		<grey>Best Web Design</grey> | Black Tie Site.<br/>
-					  		<grey>Designer of the Year</grey> | 2012.<br/>
 					  	</p>
 					  </div><!-- Tab Profile -->
 					  
@@ -131,26 +118,8 @@ require_once("models/config.php");
 							  
 							  <div class="col-xs-6">
 								  <p class="sm">
-								  	<i class="icon-phone"></i> - +44 2009-4839 <br/>
-									<i class="icon-apple"></i> - 902 3940-4439  
-								  </p>
-							  </div><!-- col-xs-6 -->
-						  </div><!-- row -->
-						  
-						  <h4>Social Links</h4>
-						  <hr></hr>
-						  <div class="row">
-							  <div class="col-xs-6">
-								  <p class="sm">
-								  	<i class="icon-facebook"></i> - Vicky.Wallberg <br/>
-									<i class="icon-tumblr"></i> - Love-Vicky-Site  
-								  </p>
-							  </div><!-- col-xs-6 -->
-							  
-							  <div class="col-xs-6">
-								  <p class="sm">
-								  	<i class="icon-dribbble"></i> - Vicoooria <br/>
-									<i class="icon-twitter"></i> - @BlackTie_co  
+								  	<i class="NAME"></i> - TRIBE <br/>
+									<i class="NAME"></i> - TRIBE  
 								  </p>
 							  </div><!-- col-xs-6 -->
 						  </div><!-- row -->
