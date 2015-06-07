@@ -53,9 +53,21 @@ require_once("models/config.php");
     </script>
     	<?php require('phpfiles/head.php'); ?>
 	</head>
-
+    
 	<body>
     <?php require('phpfiles/header.php'); ?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     <div class="tribe">
       <h1>
@@ -63,6 +75,8 @@ require_once("models/config.php");
           Tribes LeaderBoard
         </center>
      </h1>
+     
+    <iframe src="https://docs.google.com/spreadsheets/d/1EZpd5OyGU9X05NqaMFMtAGguu461V-UPDCQUMj0-1mc/pubhtml?widget=true&amp;headers=false"></iframe>
      
      </div>
      <script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>

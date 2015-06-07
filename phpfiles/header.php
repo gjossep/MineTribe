@@ -29,10 +29,10 @@ if(isUserLoggedIn()) {
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Home</a>
+                        <a class="page-scroll" href="/index.php">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Profile</a>
+                        <a class="page-scroll" href="/profile.php">Profile</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Tribe</a>
@@ -70,13 +70,13 @@ if(isUserLoggedIn()) {
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Home</a>
+                        <a class="page-scroll" href="/index.php">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/login.php">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Register</a>
+                        <a class="page-scroll" href="/register.php">Register</a>
                     </li>
                 </ul>
             </div>

@@ -61,17 +61,18 @@ require_once("models/config.php");
 	    			
 	    			  <!-- ===== First Tab ===== -->
 					  <div class="tab-pane active" id="about">
-					  	<h3>Victoria Wallberg</h3>
-					  	<h5>Web Designer</h5>
+					  	<h3>USERNAME</h3>
+					  	<h5>TRIBESTER</h5>
 					  	<hr></hr>
-					  	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-					  	<p>Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
-					  	<p class="pull-right red"><i class="icon-heart"></i></p>
+					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault"/>
+
 					  </div><!-- tab about -->
 					  
 	    			  <!-- ===== Second Tab ===== -->
 					  <div class="tab-pane" id="profile">
 					  	<h4><i class="icon-briefcase"></i> Job Experience</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
+					  	<p>Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
 					  	<p class="sm">
 					  		<grey>Black Tie Corp.</grey> | June 2013 - Actual.<br/>
 					  		<grey>Other Corp.</grey> | January 2011 - May 2013.<br/>

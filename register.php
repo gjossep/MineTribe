@@ -54,12 +54,22 @@ if(isUserLoggedIn()) {
             <input type="text" name="email" placeholder="email" />
             <p> Age </p>
             <input type="text" name="age" placeholder="age" />
+                         <p> How did you find out about us?</p>
+            <select name="findout">
+                <option value="facebook">Facebook page</option>
+  				<option value="server">On a Minecraft Server</option>
+  				<option value="friends">Friends</option>
+  				<option value="other">Other</option>
+            
+            </select>
+            <br />
             <p>Gender</p>
            	    <div class="gender">
                     <input type="radio" name="gender" value="male">  Male</input>
                     <input type="radio" name="gender" value="female"> Female</input>
                </div>
-            
+
+             
             <input type="submit" id="submit" value="Register" />
                     
         </div>
