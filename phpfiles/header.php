@@ -94,4 +94,5 @@ if(isUserLoggedIn()) {
 				<img src="/img/logo-version.png" alt="this is the logo">
             </div>
         </div>
+        
     </header>
