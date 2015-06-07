@@ -1,41 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+<?php 
+require_once("models/config.php");
+?>
 
-    <title>profile</title>
-    
-    <!-- Bootstrap core CSS -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>profile</title>
+
+
+	<!-- Add Any other css you want here -->
+	<link href="css/tribeleader" rel="stylesheet" type="text/css" />
     <link href="csstheme/bootstrap.css" rel="stylesheet">
     <link href="csstheme/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="csstheme/main.css" rel="stylesheet">
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
+    <link href="csstheme/main.css" rel="stylesheet">
+   
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-  </head>
+    
+   	<?php require('phpfiles/head.php'); ?>
+	</head>
 
-  <body>
+	<body>
     <?php require('phpfiles/header.php'); ?>
-
+    
+    <div class="Profile">
+      <h1>
+        <center>
+          Profile
+        </center>
+     </h1>
+     
     <div class="container">
     	<div class="col-lg-6 col-lg-offset-3">
     	
     		<!-- ===== vCard Navigation ===== -->
     		<div class="row w">
     			<div class="col-md-4">
-    				<img class="img-responsive" src="img/imgtheme/avatar.jpg" alt="">
+    				<img class="img-responsive" src="img/imgtheme/avatar.jpg" alt="avatar">
 					<ul class="nav nav-tabs nav-stacked" id="myTab">
 					  <li class="active"><a href="#about">Profile</a></li>
 					  <li><a href="#profile">Tribe</a></li>
@@ -52,7 +63,7 @@
 					  <div class="tab-pane active" id="about">
 					  	<h3>Victoria Wallberg</h3>
 					  	<h5>Web Designer</h5>
-					  	<hr>
+					  	<hr></hr>
 					  	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
 					  	<p>Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
 					  	<p class="pull-right red"><i class="icon-heart"></i></p>
@@ -83,11 +94,11 @@
 					  <div class="tab-pane" id="portfolio">
 						  <div class="row">
 							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p01.png" alt="">
+							  	<img class="img-responsive" src="img/imgtheme/p01.png" alt="random">
 							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
 							  </div><!-- col-xs-6 -->
 							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p02.png" alt="">
+							  	<img class="img-responsive" src="img/imgtheme/p02.png" alt="random">
 							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
 							  </div><!-- col-xs-6 -->
 						  </div><!-- row -->
@@ -95,11 +106,11 @@
 						  <div class="row">
 						  	<br>	
 							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p03.png" alt="">
+							  	<img class="img-responsive" src="img/imgtheme/p03.png" alt="random">
 							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
 							  </div><!-- col-xs-6 -->
 							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p04.png" alt="">
+							  	<img class="img-responsive" src="img/imgtheme/p04.png" alt="random">
 							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
 							  </div><!-- col-xs-6 -->
 						  </div><!-- row -->
@@ -108,7 +119,7 @@
 	    			  <!-- ===== Fourth Tab ===== -->
 					  <div class="tab-pane" id="contact">
 						  <h4>Contact Information</h4>
-						  <hr>
+						  <hr> </hr>
 						  <div class="row">
 							  <div class="col-xs-6">
 								  <p class="sm">
@@ -126,7 +137,7 @@
 						  </div><!-- row -->
 						  
 						  <h4>Social Links</h4>
-						  <hr>
+						  <hr></hr>
 						  <div class="row">
 							  <div class="col-xs-6">
 								  <p class="sm">
@@ -150,18 +161,19 @@
     	</div><!-- col-lg-6 -->
     </div><!-- /.container -->
 
-
-    <!-- Bootstrap core JavaScript
+     </div>
+         <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script>
-	$('#myTab a').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	})	
-	</script>    
-    
-  </body>
+	<script> 
+		$('#myTab a').click(function (e) {
+	  		e.preventDefault()
+	  		$(this).tab('show')
+		})	
+	</script>   
+     
+    <?php require('phpfiles/footer.php'); ?>
+</body>
 </html>

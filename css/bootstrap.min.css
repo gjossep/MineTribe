@@ -2253,7 +2253,8 @@ select[multiple], select[size] {
 input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 	outline: thin dotted;
 	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px
+	outline-offset: -2px;
+	display: inline;
 }
 output {
 	display: block;
@@ -5650,4 +5651,11 @@ td.visible-print, th.visible-print {
 	margin-left: auto;
 }
 .login {
+}
+.login signup .inputs div {
+}
+.login #signup .inputs div gender {
+	display: block;
+}
+.login #signup .inputs .gender {
 }
