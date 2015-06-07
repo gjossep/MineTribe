@@ -34,7 +34,7 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                     <a href="tribe.php"> <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
+                     <a href="tribeleader.php"> <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
                     </div>
                   <h4 class="service-heading">Tribes</h4>
                     <p class="text-muted">Find out what other tribes are out there! See how you are doing with your tribe compared to other tribes, or if you are looking for a tribe then check if anyone is recruiting!</p>
