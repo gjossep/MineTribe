@@ -24,7 +24,7 @@ require_once("models/config.php");
     <div class="tribe">
       <h1>
         <center>
-          Tribes
+          Tribes LeaderBoard
         </center>
      </h1>
      
