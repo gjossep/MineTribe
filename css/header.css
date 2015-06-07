@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.header {
+  display: block;
+}
+
+  thead {
+    display: table-header-group;
+  }
+  
+  .glyphicon-header:before {
+  content: "\e180";
+  
+  .page-header {
+  	 padding-bottom: 9px;
+ 	 margin: 40px 0 20px;
+ 	 border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .navbar-header {
+    float: left;
+  }
+  
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+    .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  
+  @media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+  
+  .modal-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -2px;
+  
+  
+ .navbar-header:before {
+	   display: table;
+  content: " ";
+ }
+ 
+ .navbar-header:after {
+	  clear: both; 
+ }
+ 

@@ -18,8 +18,9 @@ body {
 }
 
 p {
-    font-size: 14px;
-    line-height: 1.75;
+	font-size: 14px;
+	line-height: 1.75;
+	color: #333;
 }
 
 p.large {
@@ -51,9 +52,10 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+	text-transform: uppercase;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+	color: #333;
 }
 
 .img-centered {
@@ -325,9 +327,10 @@ section {
 }
 
 section h2.section-heading {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 40px;
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-size: 40px;
+	color: #333;
 }
 
 section h3.section-subheading {

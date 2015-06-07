@@ -12,29 +12,28 @@ require_once("models/config.php");
 	<meta name="author" content="">
 	<title>tribeleader</title>
 	<!-- Add Any other css you want here -->
-	<link href="css/tribeleader" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="chatjs-gh-pages/stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
+	<link href="css/tribeleader/tribeleader.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="chatjs-gh-pages/stylesheets/pygment_trac.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!-- chatjs requirements -->
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.autosize.js"></script>
-    <!-- chatjs files-->
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.utils.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.adapter.servertypes.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.adapter.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.adapter.demo.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.window.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.messageboard.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.userlist.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.pmwindow.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.friendswindow.js"></script>
-    <script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.controller.js"></script>
-    <link rel="stylesheet" href="chatjs-gh-pages/ChatJs/css/jquery.chatjs.css" />
-
-    <script type="text/javascript">
+	<!-- chatjs requirements -->
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.autosize.js"></script>
+	<!-- chatjs files-->
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.utils.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.adapter.servertypes.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.adapter.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.adapter.demo.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.window.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.messageboard.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.userlist.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.pmwindow.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.friendswindow.js"></script>
+	<script src="chatjs-gh-pages/ChatJs/js/jquery.chatjs.controller.js"></script>
+	<link rel="stylesheet" href="chatjs-gh-pages/ChatJs/css/jquery.chatjs.css" />
+	<script type="text/javascript">
         $(function () {
             $.chat({
                 // your user information
@@ -51,35 +50,21 @@ require_once("models/config.php");
             });
         });
     </script>
-    	<?php require('phpfiles/head.php'); ?>
+	<?php require('phpfiles/head.php'); ?>
 	</head>
-    
+
 	<body>
     <?php require('phpfiles/header.php'); ?>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="tribe">
       <h1>
         <center>
-          Tribes LeaderBoard
+          Tribe Leaderboards
         </center>
-     </h1>
-     
-    <iframe src="https://docs.google.com/spreadsheets/d/1EZpd5OyGU9X05NqaMFMtAGguu461V-UPDCQUMj0-1mc/pubhtml?widget=true&amp;headers=false"></iframe>
-     
-     </div>
-     <script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
+      </h1>
+    </div>
+            
+    </div>
+    <script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
     <?php require('phpfiles/footer.php'); ?>
 </body>
 </html>

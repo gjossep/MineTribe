@@ -1020,7 +1020,7 @@ select {
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 0px;
-	color: #EBEBEB;
+	color: #333333;
 }
 :after, :before {
 	-webkit-box-sizing: border-box;
@@ -1431,7 +1431,7 @@ pre code {
 }
 @media (min-width:1200px) {
 .container {
-	width: 1170px
+	width: 2000px
 }
 }
 .container-fluid {
