@@ -13,10 +13,10 @@ if(isset($_GET['user'])) {
 	if(userNameExists($username)) {
 		//If it does, lets get the user account details.
 		$userdetails = fetchUserAuthByDisplayName($username);
-		
+		$displayName = $userdetails->display_username;
 			//User examples
 			/*
-			How to acces the data: $userdetails->email;
+			How to acces the data: $userdetails email;
 			
 			Things you can do instead of email:
 			 -email
@@ -25,8 +25,6 @@ if(isset($_GET['user'])) {
 			 -title
 			 -display_name
 			 -user_name
-			
-			To put any of this data in the html do <?php $userdetails->email ?>
 			
 			*/
 			
@@ -68,7 +66,7 @@ if(isset($_GET['user'])) {
 	}
 }
 
-//After that whole scirpt we will get the stats now.
+//After that whole script we will get the stats now.
 
 //Sets up the database connection.
 $servername = "gjosse.nl.mysql";
@@ -80,14 +78,14 @@ $dbname = "gjosse_nl";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 
-//Ask the database to give me the stats and rank for the username of eiter the requiesd user or the logged in one. This is deterimend by the above script. The $username
+//Ask the database to give me the stats and rank for the username of either the requested user or the logged in one. This is deterimend by the above script. The $username
 $sql = "SELECT stats, rank FROM uf_users WHERE user_name=".$username;
 
 //Look at what the database as replied.
 $result = $conn->query($sql);
 
 //Loop over all the rows it found, but because we only gave one username value it will only have one row. 
-while($row = $result->fetch_assoc()) {
+$row = mysql_fetch_assoc($result);
 	
 	//Get the long stats data that looks like: 1,2,3,4,5
 	$statsRaw = $row["stats"];
@@ -100,8 +98,16 @@ while($row = $result->fetch_assoc()) {
 	
 	// You have to get the other stats, ill just give two examples below.
 	
-	$statPlayTime = $stats[0];
-	$statPlayerKills = $stats[1];
+	$statDistanceCrouched = $stats[7];
+	$statDistanceSprinted = $stats[8];
+	$statDistanceSwum = $stats[9];
+	$statDistanceFall = $stats[10];
+	$statDistanceClimbed = $stats[11];
+	$statUnderWater = $stats[12];	
+	$statDistanceMinecart = $stats[14];
+	$statDistanceBoat = $stats[14];
+	$statJump = $stats[15];
+	$statFishCaught = $stats[16];
 	
 	/*
 	
@@ -110,8 +116,8 @@ while($row = $result->fetch_assoc()) {
 	To get anyvalue you see here into HTML just use <?php (then the id of the thing you want, these all start with a doller sign) ?>
 	
 	*/
-	
-}
+
+
 
 ?>
 
@@ -395,62 +401,109 @@ while($row = $result->fetch_assoc()) {
 	    			  <!-- ===== First Tab PROFILE ===== -->
 					  <div class="tab-pane active" id="about">
 
-					  	<h3>USERNAME</h3>
-					  	<h4>Rank # </h4>
+					  	<h3><?php $dispayName ?></h3>
+					  	<h4>Rank <?php $rank ?></h4>
 					  	<hr></hr>                       
-                  
-                  <!--if friends-->
-<!--                 <h1> <center>FRIENDS</center></h1>
-				 <img src="img/removefriend.png" alt="tribedefault" height="310" width="310"/>
-                 <hr />
-                 <h5> <center>remove friend?</center></h5>-->
-                 
-                 <!--if not logged in-->
-                 
-				 <img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>
-                 <hr />
-                 <h5> <center>You need to Login or Register to add people</center></h5>
-                 
-                 
-               <!-- if not friends-->
-				<!--<h1> <center>Add Friend</center></h1>
-                <img src="img/becomefriend.png" alt="tribedefault" height="310" width="310"/>
+          <?php if(isUserLoggedIn()) {            
+		  
+		  			if(!isset($_GET['user']))  {
+		  ?>     
+           						<h4> <center> ADD MORE FRIENDS </center> </h4>
+                				<hr />
+                				<img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>
+           
+           			<?php }else{ ?> 
+                    			<!--if not friends-->
+								<h1> <center>Add Friend</center></h1>
+               					<img src="img/becomefriend.png" alt="tribedefault" height="310" width="310"/>
                                 <hr />
-                 <h5> <center>add friend?</center></h5>-->
+                 				<h5> <center>add friend?</center></h5>
+                	<?php } ?>
+       	 <?php } else { ?>
+							<!--if not logged in-->
+						 	<img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>
+                 			<hr />
+                 			<h5> <center>You need to Login or Register to add people</center></h5>
+                     
+         <?php } ?>
+
+				 		<!--	<h1> <center>FRIENDS</center></h1>
+				 				<img src="img/removefriend.png" alt="tribedefault" height="310" width="310"/>
+                				<hr />
+                 				<h5> <center>remove friend?</center></h5>-->
                  
-               <!-- if your own account-->
-                <!--<<!--h4> <center> ADD MORE FRIENDS </center> </h4>
-                <hr />
-                <img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>-->
+                		
+                 
+                 
+
+                 
+               <!--<!if your own account-->
+
                 
 					<hr />
                     
 					  </div>
 					  
 	    			  <!-- ===== Second Tab TRIBE ===== -->
-					  
-                      <!--if user has tribe-->
-                      <!--<div class="tab-pane" id="profile">
-					  	<h2><center>Tribe</center></h2>
-						<hr />
-					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="210" width="330"/>
-					  <hr />-->
+		<div class="tab-pane" id="profile">
+		<?php if(isUserLoggedIn()) {            
+		  
+		  		if(!isset($_GET['user']))  {
+		?> 
+                      		<!-- if user himself GOES TO IT himself and no tribe-->
+                  			
+					  		<h2><center>No tribe yet!</center></h2>
+							<hr />
+                       	 	<h4> <center> Create a tribe with your friends or join your friends tribe! </center> </h4>
+                       	 	<hr />                        
+                            
+                            <!--if user has tribe-->
+<!--                     	<div class="tab-pane" id="profile">
+					  		<h2><center>Tribe</center></h2>
+							<hr />
+					  		<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="210" width="330"/>
+					 		<hr />-->
+                            
+                <?php }else{ ?>                             	
+                <!--if user has no tribe-->
+                  			<div class="tab-pane" id="profile">
+					 		<h2><center>A lone wolf :(</center></h2>
+							<hr />
+					 		<img src="img/tribecover/notribe.jpg" alt="tribedefault" height="200" width="330"/>
+							<hr />
+              
+                            <!--if user has tribe-->
+<!--                     	<div class="tab-pane" id="profile">
+					  		<h2><center>Tribe</center></h2>
+							<hr />
+					  		<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="210" width="330"/>
+					 		<hr />-->
+ 				<?php } ?>
+          <?php }else{ ?>     
 					
-                      	<!--if user has no tribe-->
-<!--                        <div class="tab-pane" id="profile">
-					  	<h2><center>A lone wolf :(</center></h2>
-						<hr />
-					  	<img src="img/tribecover/notribe.jpg" alt="tribedefault" height="200" width="330"/>
-					  <hr />-->
-                      
-                      if user himself GOES TO IT and no tribe
-                  <div class="tab-pane" id="profile">
-					  	<h2><center>No tribe yet!</center></h2>
-						<hr />
-                        <h4> <center> Create a tribe with your friends or join your friends tribe! </center> </h4>
-                        <hr />
+						    <div class="tab-pane" id="profile">
+					 		<h2><center>A lone wolf :(</center></h2>
+							<hr />
+					 		<img src="img/tribecover/notribe.jpg" alt="tribedefault" height="200" width="330"/>
+							<hr />
+         	
+                            <!--if user has tribe-->
+<!--                     	<div class="tab-pane" id="profile">
+					  		<h2><center>Tribe</center></h2>
+							<hr />
+					  		<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="210" width="330"/>
+					 		<hr />-->
+                 
+            <?php } ?>               
+                      </div>
+       	   
+                   
+
                         
-					  </div><!-- Tab Profile -->
+                        
+                        
+                        
+					  <!-- Tab statistics -->
 					  
 	    			  <!-- ===== Third Tab ===== -->
 					  <div class="tab-pane" id="portfolio">
@@ -472,7 +525,7 @@ while($row = $result->fetch_assoc()) {
                             Distance Crouched
                         </td>
                         <td>
-                            Row 1
+                            <?php $statDistanceCrouched ?>
                         </td>
                     </tr>
                     <tr>
@@ -480,7 +533,7 @@ while($row = $result->fetch_assoc()) {
                             Distance Sprinted
                         </td>
                         <td>
-                            Row 2
+                            <?php $statDistanceSprinted ?>
                         </td>
                     </tr>
                     <tr>
@@ -488,7 +541,7 @@ while($row = $result->fetch_assoc()) {
                             Distance Swum
                         </td>
                         <td>
-                            Row 2
+                            <?php $statDistanceSwum ?>
                         </td>
                     </tr>
                     <tr>
@@ -496,7 +549,7 @@ while($row = $result->fetch_assoc()) {
                             Distance Fallen
                         </td>
                         <td>
-                            Row 3
+                            <?php $statDistanceFall ?>
                         </td>
                     </tr>
                     <tr>
@@ -504,31 +557,23 @@ while($row = $result->fetch_assoc()) {
                             Distance Climbed
                         </td>
                         <td>
-                            Row 3
+                            <?php $statDistanceClimbed ?>
                         </td>
                     </tr>
                     <tr>
                         <td >
-                            Distance walked Underwater
+                            Distance Underwater
                         </td>
                         <td>
-                            Row 3
+                            <?php $statDistanceCrouched ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            Distance doven
-                        </td>
-                        <td>
-                            Row 3
-                        </td>
-                    </tr>     
+                    </tr>   
                     <tr>
                         <td >
                             Distance by Boat
                         </td>
                         <td>
-                            Row 3
+                            <?php $statDistanceBoat ?>
                         </td>
                     </tr> 
                     <tr>
@@ -536,29 +581,22 @@ while($row = $result->fetch_assoc()) {
                             Distance by Minecart
                         </td>
                         <td>
-                            Row 3
+                            <?php $statDistanceMinecart ?>
                         </td>
                     </tr> 
                     <tr>
                         <td >
-                            Distance by Pig
-                        </td>
-                        <td>
-                            Row 3
-                        </td>
-                    </tr>                    <tr>
-                        <td >
                             Amount of Jumps
                         </td>
                         <td>
-                            12 jumps
+                            <?php $statJump ?>
                         </td>
                     </tr>                    <tr>
                         <td >
                             Fish Caught
                         </td>
                         <td>
-                            100000000000
+                            <?php $statFishCaught ?>
                         </td>
                     </tr>                                                                                                                  
                 </table>
