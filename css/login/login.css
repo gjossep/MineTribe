@@ -85,6 +85,10 @@
 	background-color: rgb(202,246,255);
 }*/
 
+* {
+	display: block;	
+}
+
 body {
 	background-image: url(/img/backgroundlogin.jpg);
 	background-position: center center;

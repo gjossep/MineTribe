@@ -14,7 +14,7 @@
 	</head>
 	<body>
     	<?php require('phpfiles/header.php'); ?>
-    <script src="js/statstable.js"></script>
+    <!--<script src="js/statstable.js"></script>-->
     <div class="tribe">
       <h1>
         <center>
@@ -199,8 +199,8 @@
 </div>
             
 
-<script src="js/statstable.js"></script>
-
+<!--<script src="js/statstable.js"></script>
+-->
     <?php require('phpfiles/footer.php'); ?>
 </body>
 </html>
