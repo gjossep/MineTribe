@@ -234,6 +234,12 @@ require_once("models/config.php");
    .col-md-4 #myTab li a {
 	color: #06C;
 }
+   #portfolio .row .table table tr td h4 b {
+	color: #096;
+}
+   #portfolio .row h3 b {
+	color: #066;
+}
    </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -273,10 +279,10 @@ require_once("models/config.php");
     			<div class="col-md-8">
 	    			<div class="tab-content">
 	    			
-	    			  <!-- ===== First Tab ===== -->
+	    			  <!-- ===== First Tab PROFILE ===== -->
 					  <div class="tab-pane active" id="about">
 					  	<h3>USERNAME</h3>
-					  	<h5>TRIBESTER</h5>
+					  	<h4>Rank # </h4>
 					  	<hr></hr>                       
                   
                   <!--if friends-->
@@ -285,32 +291,57 @@ require_once("models/config.php");
                  <hr />
                  <h5> <center>remove friend?</center></h5>-->
                  
+                 <!--if not logged in-->
+                 
+				 <img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>
+                 <hr />
+                 <h5> <center>You need to Login or Register to add people</center></h5>
+                 
+                 
                <!-- if not friends-->
-				<h1> <center>Add Friend</center></h1>
+				<!--<h1> <center>Add Friend</center></h1>
                 <img src="img/becomefriend.png" alt="tribedefault" height="310" width="310"/>
                                 <hr />
-                 <h5> <center>add friend?</center></h5>
+                 <h5> <center>add friend?</center></h5>-->
+                 
                <!-- if your own account-->
                 <!--<<!--h4> <center> ADD MORE FRIENDS </center> </h4>
                 <hr />
                 <img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>-->
                 
 					<hr />
-					  </div><!-- tab about -->
+                    
+					  </div>
 					  
-	    			  <!-- ===== Second Tab ===== -->
-					  <div class="tab-pane" id="profile">
+	    			  <!-- ===== Second Tab TRIBE ===== -->
+					  
+                      <!--if user has tribe-->
+                      <!--<div class="tab-pane" id="profile">
 					  	<h2><center>Tribe</center></h2>
-<hr />
+						<hr />
 					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="210" width="330"/>
-					  <hr />
-					  	</p>
+					  <hr />-->
+					
+                      	<!--if user has no tribe-->
+<!--                        <div class="tab-pane" id="profile">
+					  	<h2><center>A lone wolf :(</center></h2>
+						<hr />
+					  	<img src="img/tribecover/notribe.jpg" alt="tribedefault" height="200" width="330"/>
+					  <hr />-->
+                      
+                      if user himself GOES TO IT and no tribe
+                  <div class="tab-pane" id="profile">
+					  	<h2><center>No tribe yet!</center></h2>
+						<hr />
+                        <h4> <center> Create a tribe with your friends or join your friends tribe! </center> </h4>
+                        <hr />
+                        
 					  </div><!-- Tab Profile -->
 					  
 	    			  <!-- ===== Third Tab ===== -->
 					  <div class="tab-pane" id="portfolio">
 						  <div class="row">
-					  		<h3>Fun Statistics</h3>
+					  		<h3><b>Fun Statistics</b></h3>
 					  	 
               <div class="table" >
                 <table>
@@ -426,8 +457,7 @@ require_once("models/config.php");
 					  
 	    			  <!-- ===== Fourth Tab ===== -->
 					  <div class="tab-pane" id="contact">
-					  		<h4>Friends</h4>
-					  		<hr></hr> 
+					  		<h4><b>Friends<b></h4>
               <div class="table" >
                 <table>
                     <tr>
