@@ -6,11 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>stats</title>
+	<title>stats</title>	
+	<?php require('phpfiles/head.php'); ?>
 	<!-- Add Any other css you want here -->
+    <link hreh="css/header.css" rel="stylesheet"  />
 	<link href="css/tribeleader/stats.css" rel="stylesheet" type="text/css" />
+
 	</head>
 	<body>
+    	<?php require('phpfiles/header.php'); ?>
     <script src="js/statstable.js"></script>
     <div class="tribe">
       <h1>
@@ -198,6 +202,6 @@
 
 <script src="js/statstable.js"></script>
 
-
+    <?php require('phpfiles/footer.php'); ?>
 </body>
 </html>
