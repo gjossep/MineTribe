@@ -20,7 +20,221 @@ require_once("models/config.php");
   	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     <link href="csstheme/main.css" rel="stylesheet">
+   <style> 
    
+.CSSTableGenerator {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.CSSTableGenerator table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.CSSTableGenerator tr:hover td{
+	
+}
+.CSSTableGenerator tr:nth-child(odd){ background-color:#ffffff; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#ffffff; }.CSSTableGenerator td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+}.CSSTableGenerator tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSSTableGenerator tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSSTableGenerator tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td{
+		background:-o-linear-gradient(bottom, #e5e5e5 5%, #e5e5e5 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e5e5e5), color-stop(1, #e5e5e5) );
+	background:-moz-linear-gradient( center top, #e5e5e5 5%, #e5e5e5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5", endColorstr="#e5e5e5");	background: -o-linear-gradient(top,#e5e5e5,e5e5e5);
+
+	background-color:#e5e5e5;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+}
+.CSSTableGenerator tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #e5e5e5 5%, #e5e5e5 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e5e5e5), color-stop(1, #e5e5e5) );
+	background:-moz-linear-gradient( center top, #e5e5e5 5%, #e5e5e5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5", endColorstr="#e5e5e5");	background: -o-linear-gradient(top,#e5e5e5,e5e5e5);
+
+	background-color:#e5e5e5;
+}
+.CSSTableGenerator tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+.button {
+   border: 2px solid #000000;
+   background: #d91f1f;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), to(#d91f1f));
+   background: -webkit-linear-gradient(top, #ff0000, #d91f1f);
+   background: -moz-linear-gradient(top, #ff0000, #d91f1f);
+   background: -ms-linear-gradient(top, #ff0000, #d91f1f);
+   background: -o-linear-gradient(top, #ff0000, #d91f1f);
+   background-image: -ms-linear-gradient(top, #ff0000 0%, #d91f1f 100%);
+   padding: 9px 18px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #e6123c 0 1px 0;
+   color: #000000;
+   font-size: 18px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border: 2px solid #08131a;
+   text-shadow: #cf1f1f 0 1px 0;
+   background: #de6f6f;
+   background: -webkit-gradient(linear, left top, left bottom, from(#c26161), to(#de6f6f));
+   background: -webkit-linear-gradient(top, #c26161, #de6f6f);
+   background: -moz-linear-gradient(top, #c26161, #de6f6f);
+   background: -ms-linear-gradient(top, #c26161, #de6f6f);
+   background: -o-linear-gradient(top, #c26161, #de6f6f);
+   background-image: -ms-linear-gradient(top, #c26161 0%, #de6f6f 100%);
+   color: #000000;
+   }
+.button:active {
+	text-shadow: #de1f1f 0 1px 0;
+	border: 2px solid #000000;
+	background: #cc5c5c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#d15858), to(#de6f6f));
+	background: -webkit-linear-gradient(top, #d15858, #cc5c5c);
+	background: -moz-linear-gradient(top, #d15858, #cc5c5c);
+	background: -ms-linear-gradient(top, #d15858, #cc5c5c);
+	background: -o-linear-gradient(top, #d15858, #cc5c5c);
+	background-image: -ms-linear-gradient(top, #d15858 0%, #cc5c5c 100%);
+	color: #000000;
+	position: relative;
+	height: 10px;
+   }
+   .addbutton {
+   border: 2px solid #000000;
+   background: #11eb44;
+   background: -webkit-gradient(linear, left top, left bottom, from(#12e62b), to(#11eb44));
+   background: -webkit-linear-gradient(top, #12e62b, #11eb44);
+   background: -moz-linear-gradient(top, #12e62b, #11eb44);
+   background: -ms-linear-gradient(top, #12e62b, #11eb44);
+   background: -o-linear-gradient(top, #12e62b, #11eb44);
+   background-image: -ms-linear-gradient(top, #12e62b 0%, #11eb44 100%);
+   padding: 9px 18px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #5cd914 0 1px 0;
+   color: #000000;
+   font-size: 18px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.addbutton:hover {
+   border: 2px solid #08131a;
+   text-shadow: #3ec948 0 1px 0;
+   background: #6fde7f;
+   background: -webkit-gradient(linear, left top, left bottom, from(#78eb5e), to(#6fde7f));
+   background: -webkit-linear-gradient(top, #78eb5e, #6fde7f);
+   background: -moz-linear-gradient(top, #78eb5e, #6fde7f);
+   background: -ms-linear-gradient(top, #78eb5e, #6fde7f);
+   background: -o-linear-gradient(top, #78eb5e, #6fde7f);
+   background-image: -ms-linear-gradient(top, #78eb5e 0%, #6fde7f 100%);
+   color: #000000;
+   }
+.addbutton:active {
+   text-shadow: #1fde26 0 1px 0;
+   border: 2px solid #000000;
+   background: #98cc5e;
+   background: -webkit-gradient(linear, left top, left bottom, from(#60de47), to(#6fde7f));
+   background: -webkit-linear-gradient(top, #60de47, #98cc5e);
+   background: -moz-linear-gradient(top, #60de47, #98cc5e);
+   background: -ms-linear-gradient(top, #60de47, #98cc5e);
+   background: -o-linear-gradient(top, #60de47, #98cc5e);
+   background-image: -ms-linear-gradient(top, #60de47 0%, #98cc5e 100%);
+   color: #000000;
+   }
+   #about h4 {
+	   color:#099
+}
+   #about h3 {
+	   color:#C00
+}
+   #about h1 center {
+	   color:#099
+}
+
+   #about h5 {
+	color: #666;
+}
+   .col-md-4 #myTab li a {
+}
+   #profile h2 center {
+	color: #339;
+}
+   .col-md-4 #myTab li a {
+	color: #06C;
+}
+   </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -50,7 +264,7 @@ require_once("models/config.php");
 					<ul class="nav nav-tabs nav-stacked" id="myTab">
 					  <li class="active"><a href="#about">Profile</a></li>
 					  <li><a href="#profile">Tribe</a></li>
-					  <li><a href="#portfolio">Statistics</a></li>
+					  <li><a href="#portfolio">Fun Statistics</a></li>
 					  <li><a href="#contact">Friends</a></li>
 					</ul>    			
 				</div><!-- col-md-4 -->
@@ -64,72 +278,182 @@ require_once("models/config.php");
 					  	<h3>USERNAME</h3>
 					  	<h5>TRIBESTER</h5>
 					  	<hr></hr>                       
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
-				
-
+                  
+                  <!--if friends-->
+<!--                 <h1> <center>FRIENDS</center></h1>
+				 <img src="img/removefriend.png" alt="tribedefault" height="310" width="310"/>
+                 <hr />
+                 <h5> <center>remove friend?</center></h5>-->
+                 
+               <!-- if not friends-->
+				<h1> <center>Add Friend</center></h1>
+                <img src="img/becomefriend.png" alt="tribedefault" height="310" width="310"/>
+                                <hr />
+                 <h5> <center>add friend?</center></h5>
+               <!-- if your own account-->
+                <!--<<!--h4> <center> ADD MORE FRIENDS </center> </h4>
+                <hr />
+                <img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>-->
+                
+					<hr />
 					  </div><!-- tab about -->
 					  
 	    			  <!-- ===== Second Tab ===== -->
 					  <div class="tab-pane" id="profile">
-					  	<h3>Tribe</h3>
-					  	<h4>TRIBENAME</h4>
-					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="300" width="550"/>
-					  
+					  	<h2><center>Tribe</center></h2>
+<hr />
+					  	<img src="img/tribecover/tribedefault.jpg" alt="tribedefault" height="210" width="330"/>
+					  <hr />
 					  	</p>
 					  </div><!-- Tab Profile -->
 					  
 	    			  <!-- ===== Third Tab ===== -->
 					  <div class="tab-pane" id="portfolio">
 						  <div class="row">
-							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p01.png" alt="random">
-							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
-							  </div><!-- col-xs-6 -->
-							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p02.png" alt="random">
-							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
-							  </div><!-- col-xs-6 -->
-						  </div><!-- row -->
-						  
-						  <div class="row">
-						  	<br>	
-							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p03.png" alt="random">
-							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
-							  </div><!-- col-xs-6 -->
-							  <div class="col-xs-6 centered">
-							  	<img class="img-responsive" src="img/imgtheme/p04.png" alt="random">
-							  	<a href="#"><h6><i class="icon-link"></i> Project Name</h6></a>
-							  </div><!-- col-xs-6 -->
-						  </div><!-- row -->
+					  		<h3>Fun Statistics</h3>
+					  	 
+              <div class="table" >
+                <table>
+                    <tr>
+                        <td>
+                            <h4><b>Skill</b></h4>
+                        </td>
+                        <td >
+                            <h4><b>Data</b></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance Crouched
+                        </td>
+                        <td>
+                            Row 1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance Sprinted
+                        </td>
+                        <td>
+                            Row 2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance Swum
+                        </td>
+                        <td>
+                            Row 2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance Fallen
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance Climbed
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance walked Underwater
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Distance doven
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr>     
+                    <tr>
+                        <td >
+                            Distance by Boat
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td >
+                            Distance by Minecart
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td >
+                            Distance by Pig
+                        </td>
+                        <td>
+                            Row 3
+                        </td>
+                    </tr>                    <tr>
+                        <td >
+                            Amount of Jumps
+                        </td>
+                        <td>
+                            12 jumps
+                        </td>
+                    </tr>                    <tr>
+                        <td >
+                            Fish Caught
+                        </td>
+                        <td>
+                            100000000000
+                        </td>
+                    </tr>                                                                                                                  
+                </table>
+                <hr />
+            </div>
+            
+                            
+						</div>
 					  </div><!-- /Tab Portfolio -->
 					  
 	    			  <!-- ===== Fourth Tab ===== -->
 					  <div class="tab-pane" id="contact">
-						  <h4>Contact Information</h4>
-						  <hr> </hr>
-						  <div class="row">
-							  <div class="col-xs-6">
-								  <p class="sm">
-								  	<i class="icon-globe"></i> - BlackTie.co <br/>
-									<i class="icon-envelope"></i> - victoria@blacktie.co  
-								  </p>
-							  </div><!-- col-xs-6 -->
-							  
-							  <div class="col-xs-6">
-								  <p class="sm">
-								  	<i class="NAME"></i> - TRIBE <br/>
-									<i class="NAME"></i> - TRIBE  
-								  </p>
-							  </div><!-- col-xs-6 -->
-						  </div><!-- row -->
-					  </div><!-- Tab Contact -->
-					  
-					</div><!-- Tab Content -->
-    			</div><!-- col-md-8 -->
-    		</div><!-- row w -->
-    	</div><!-- col-lg-6 -->
-    </div><!-- /.container -->
+					  		<h4>Friends</h4>
+					  		<hr></hr> 
+              <div class="table" >
+                <table>
+                    <tr>
+                        <td>
+                            Player Name
+                        </td>
+                        <td >
+                            Player Name
+                        </td>
+           			    <td >
+                            Player Name
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            friend
+                        </td>
+                        <td>
+                            friend
+                        </td>
+           				<td>
+                            friend
+                        </td>     
+                     </tr>                                                                    
+                </table>
+                <hr />
 
      </div>
          <!-- Bootstrap core JavaScript
@@ -144,6 +468,5 @@ require_once("models/config.php");
 		})	
 	</script>   
      
-    <?php require('phpfiles/footer.php'); ?>
 </body>
 </html>
