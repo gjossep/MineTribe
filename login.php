@@ -25,7 +25,7 @@ if(isUserLoggedIn()) {
 	<title>Login</title>
 	<?php require('phpfiles/head.php'); ?>
 
-	<!-- Add Any other css you want here -->
+	<!-- Add Any other css you want here --> 
 	<link href="css/login/login.css" rel="stylesheet" type="text/css" />
 	</head>
 
@@ -39,7 +39,7 @@ if(isUserLoggedIn()) {
         </center>
      </h1>
      
-     <form id="signup">
+     <form id="signup" role='form' name='login' action='api/process_login.php' method='post'>
 
         <div class="inputs">
         

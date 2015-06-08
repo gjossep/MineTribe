@@ -227,7 +227,7 @@ function fetchAllUsers($limit = null){
 
         $sqlVars = array();
 
-        $query = "select {$db_table_prefix}users.id as user_id, user_name, display_name, email, title, sign_up_stamp, last_sign_in_stamp, active, enabled, primary_group_id from {$db_table_prefix}users";
+        $query = "select {$db_table_prefix}users.id as user_id, user_name, display_name, email, title, sign_up_stamp, last_sign_in_stamp, active, enabled, primary_group_id, stats from {$db_table_prefix}users";
 
         $stmt = $db->prepare($query);
         $stmt->execute($sqlVars);
@@ -266,7 +266,7 @@ function fetchUser($user_id){
       
       $sqlVars = array();
       
-      $query = "select {$db_table_prefix}users.id as user_id, user_name, display_name, email, title, sign_up_stamp, last_sign_in_stamp, active, enabled, primary_group_id from {$db_table_prefix}users where {$db_table_prefix}users.id = :user_id";
+      $query = "select {$db_table_prefix}users.id as user_id, user_name, display_name, email, title, sign_up_stamp, last_sign_in_stamp, active, enabled, primary_group_id, stats from {$db_table_prefix}users where {$db_table_prefix}users.id = :user_id";
       
       $sqlVars[':user_id'] = $user_id;
       
@@ -346,6 +346,10 @@ function fetchUserAuthByEmail($email){
     return fetchUserAuth('email', $email);
 }
 
+function fetchUserAuthByDisplayName($displayName){
+    return fetchUserAuth('display_name', $displayName);
+}
+
 // Similar to loadUser, except additionally loads authentication data including password hash and activation request data
 function fetchUserAuth($column, $data){    
     try {
@@ -372,7 +376,8 @@ function fetchUserAuth($column, $data){
             sign_up_stamp,
             last_sign_in_stamp,
             enabled,
-            primary_group_id
+            primary_group_id,
+			stats
             FROM ".$db_table_prefix."users
             WHERE
             $column = :data
@@ -914,7 +919,7 @@ function updatePasswordFromToken($password, $current_token) {
 /*****************  User create and delete functions *******************/
 
 // Add a user to the database
-function addUser($user_name, $display_name, $title, $password, $email, $active, $activation_token){
+function addUser($user_name, $display_name, $title, $password, $email, $active, $activation_token, $stats){
     try {
         global $db_table_prefix;
         
@@ -926,6 +931,7 @@ function addUser($user_name, $display_name, $title, $password, $email, $active, 
             password,
             email,
             activation_token,
+			stats,
             last_activation_request,
             lost_password_request,
             lost_password_timestamp,
@@ -940,6 +946,7 @@ function addUser($user_name, $display_name, $title, $password, $email, $active, 
             :password,
             :email,
             :activation_token,
+			:stats
             '".time()."',
             '0',
             '".time()."',
@@ -956,7 +963,8 @@ function addUser($user_name, $display_name, $title, $password, $email, $active, 
             ':password' => $password,
             ':email' => $email,
             ':active' => $active,
-            ':activation_token' => $activation_token
+            ':activation_token' => $activation_token,
+			':stats' => $stats
         );
     
         $stmt = $db->prepare($query);
@@ -1465,7 +1473,7 @@ function fetchGroupUsers($group_id) {
         $sqlVars = array();
         
         $query = "SELECT {$db_table_prefix}users.id as user_id, user_name, display_name, email, title, sign_up_stamp,
-            last_sign_in_stamp, active, enabled, primary_group_id  
+            last_sign_in_stamp, active, enabled, primary_group_id, stats
             FROM ".$db_table_prefix."user_group_matches,".$db_table_prefix."users
             WHERE group_id = :group_id and ".$db_table_prefix."user_group_matches.user_id = ".$db_table_prefix."users.id
             ";

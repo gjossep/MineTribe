@@ -89,7 +89,7 @@ if(count($errors) == 0)
     if($email == 1){
         $existsVar = !emailExists($email_address);
     }else{
-        $existsVar = !usernameExists($username);
+        $existsVar = !displayNameExists($username);
     }
 
     if($existsVar)
@@ -101,7 +101,7 @@ if(count($errors) == 0)
         if ($email == 1){
             $userdetails = fetchUserAuthByEmail($email_address);
         } elseif ($email == 0) {
-            $userdetails = fetchUserAuthByUserName($username);
+            $userdetails = fetchUserAuthByDisplayName($username);
         }
         //See if the user's account is activated
         if($userdetails["active"]==0)
@@ -130,6 +130,7 @@ if(count($errors) == 0)
                 $loggedInUser->displayname = $userdetails["display_name"];
                 $loggedInUser->username = $userdetails["user_name"];
                 $loggedInUser->alerts = array();
+				$loggedInUser->stats = $userdetails["stats"];
                 
                 //Update last sign in
                 $loggedInUser->updateLastSignIn();

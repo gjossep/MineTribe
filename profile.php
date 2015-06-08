@@ -1,5 +1,118 @@
 <?php 
+
+//Gets all the loggedIn account system. 
 require_once("models/config.php");
+
+//This checks the data from the ?user= exists. So if its just profile.php it will return false here.
+if(isset($_GET['user'])) {
+	
+	//This gets the value of the ?user= in the url.
+	$username = $_GET['user'];
+
+	//Checks if thats a real user.
+	if(userNameExists($username)) {
+		//If it does, lets get the user account details.
+		$userdetails = fetchUserAuthByDisplayName($username);
+		
+			//User examples
+			/*
+			How to acces the data: $userdetails->email;
+			
+			Things you can do instead of email:
+			 -email
+			 -id
+			 -password
+			 -title
+			 -display_name
+			 -user_name
+			
+			To put any of this data in the html do <?php $userdetails->email ?>
+			
+			*/
+			
+	//So its not a real user.
+	} else {
+		
+		//Check if logged in.
+ 		if(isUserLoggedIn()) { 	
+		
+			//If we are logged in, lets go the profile.php page without any ?user=
+			header("Location: profile.php");
+			//Stops the rest of the page loading so it saves time.
+			die();
+			
+		//So not logged in.
+		} else {
+			
+			//Lets go back to the home page then.
+			header("Location: index.php");
+			die();	
+		}
+	}
+
+//So the ?user= field is empty or doesnt exist.
+} else {
+	
+	//Check if the user is logged in
+	if(isUserLoggedIn()) { 
+	
+		//They are so lets get the logged-in user's uuid or username.
+		$username = $loggedInUser -> user_name;	
+	
+	//Not logged in then.
+	} else {
+		
+		//Fuck you go home.
+		header("Location: index.php");
+		die();	
+	}
+}
+
+//After that whole scirpt we will get the stats now.
+
+//Sets up the database connection.
+$servername = "gjosse.nl.mysql";
+$username = "gjosse_nl";
+$password = "bcJ7UEPx";
+$dbname = "gjosse_nl";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+//Ask the database to give me the stats and rank for the username of eiter the requiesd user or the logged in one. This is deterimend by the above script. The $username
+$sql = "SELECT stats, rank FROM uf_users WHERE user_name=".$username;
+
+//Look at what the database as replied.
+$result = $conn->query($sql);
+
+//Loop over all the rows it found, but because we only gave one username value it will only have one row. 
+while($row = $result->fetch_assoc()) {
+	
+	//Get the long stats data that looks like: 1,2,3,4,5
+	$statsRaw = $row["stats"];
+	
+	//Explode or divide the data by the commas so we can get individal stats values. This will return a array of stats, to get the one we want we have to do $stats[statNumber]
+	$stats = explode(',', $statsRaw);
+	
+	//Get and store rank as a value. 
+	$rank = $row['rank'];
+	
+	// You have to get the other stats, ill just give two examples below.
+	
+	$statPlayTime = $stats[0];
+	$statPlayerKills = $stats[1];
+	
+	/*
+	
+	To add these stats to HTML just use <?php $statPlayTime ?> to put them in anywhere.
+	
+	To get anyvalue you see here into HTML just use <?php (then the id of the thing you want, these all start with a doller sign) ?>
+	
+	*/
+	
+}
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -281,6 +394,7 @@ require_once("models/config.php");
 	    			
 	    			  <!-- ===== First Tab PROFILE ===== -->
 					  <div class="tab-pane active" id="about">
+
 					  	<h3>USERNAME</h3>
 					  	<h4>Rank # </h4>
 					  	<hr></hr>                       
