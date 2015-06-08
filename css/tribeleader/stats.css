@@ -29,4 +29,5 @@ table th {
 }
 table th.last {
   border-right: none;
+}.table {
 }
