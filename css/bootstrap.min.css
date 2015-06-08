@@ -1429,9 +1429,9 @@ pre code {
 	width: 970px
 }
 }
-@media (min-width:1200px) {
+@media (min-width:1100px) {
 .container {
-	width: 2000px
+	width: 1170px
 }
 }
 .container-fluid {

@@ -9,7 +9,6 @@
 	<title>stats</title>	
 	<?php require('phpfiles/head.php'); ?>
 	<!-- Add Any other css you want here -->
-    <link hreh="css/header.css" rel="stylesheet"  />
 	<link href="css/tribeleader/stats.css" rel="stylesheet" type="text/css" />
 
 	</head>
