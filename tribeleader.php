@@ -83,7 +83,7 @@ body {
 }
 
 .footer {
-	background:#900;
+	background:#CCC;
 	color:#000;
 }
 
