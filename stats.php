@@ -26,6 +26,17 @@
 	background-color: #CCC;
 	
 }
+	table th {
+  		background: #06F;
+		color:#FFF;
+	}
+    
+	.info h5 {
+	color: #FFF;
+	background-color: #06F;
+	padding-top:10px;
+	padding-bottom:10px;
+}
 
     </style>
 	</head>
@@ -131,9 +142,13 @@ $conn->close();
   </tbody>
 </table>
 
-</div>
-          
+</div>     
 
+</div>
+<div class="info">
+<h5> <center><b>These are the overall stats, you can check the top rank of each skill by clicking on it.</b></center>
+<center><b>Search your friends stats or check your Fun Statistics on your profile. (You can click on a name to go to their profile)</b></center></h5>
+</div>    
 <!--<script src="js/statstable.js"></script>
 -->
     <div class="footer">
