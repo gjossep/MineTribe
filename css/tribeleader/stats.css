@@ -24,7 +24,7 @@ table th, table td {
 }
 table th {
   background: #00cccc;
-  color: #fff;
+  color: #CCC;
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -33,4 +33,9 @@ table th.last {
 }.table {
 }
 
+body {
+	background-image: url(/img/backgroundstats.png);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 

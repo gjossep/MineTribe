@@ -44,20 +44,20 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <a href="friends.php"><img src="img/leadericons.png" width="257" height="181" alt="tribe"></a> 
+                    <a href="stats.php"><img src="img/statsicon.png" width="257" height="181" alt="tribe"></a> 
                     </div>
-                  <h4 class="service-heading">Tribesmen</h4>
-                    <p class="text-muted">The complete list of tribesmen that are activate on this site! Search your minecraft friends here and add them!</p>
+                  <h4 class="service-heading">Stats</h4>
+                    <p class="text-muted">Check your minecraft ranking with the other players on this site and your friends! (Are your statistics not as high as they should be? Maybe the server you are playing on doesn't have the MineTribe plugin yet!)</p>
                 </div>
                 <div class="col-md-4">
                    <div class="icons3">
-                   <a href="stats.php"><img src="img/statsicon.png" width="257" height="181" alt="tribe"> </a>
+                   <a href="friends.php"><img src="img/leadericons.png" width="257" height="181" alt="tribe"> </a>
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
                   </div>
-                   <h4 class="service-heading">Stats</h4>
-                    <p class="text-muted">Check your minecraft ranking with the other players on this site and your friends! (Are your statistics not as high as they should be? Maybe the server you are playing on doesn't have the MineTribe plugin yet!)</p>
+                   <h4 class="service-heading">Tribesmen</h4>
+                    <p class="text-muted">The complete list of tribesmen that are activate on this site! Search your minecraft friends here and add them! Want to add your friends? Get them to sign up on MineTribe.</p>
                
 
             </div>

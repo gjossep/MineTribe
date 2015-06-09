@@ -70,6 +70,13 @@ require_once("models/config.php");
     .tribe h1 {
 		color:#C33;
 }
+
+body {
+	background-image: url(/img/backgroundtribe.png);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	position: bottom;
+}
     </style>
     
 	</head>
