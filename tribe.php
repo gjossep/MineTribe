@@ -30,17 +30,18 @@ require_once("models/config.php");
 	color:#000;
 	
 }
-    .info h5 {
+
+body {
+	background-image: url(/img/backgroundlogin.jpg);
+	background-repeat: repeat;
+
+}
+
+    .info {
 	color: #000;
 	background-color: #FFF;
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
-
-body {
-	background-image: url(/img/backgroundlogin.png);
-	background-repeat: repeat;
-
 }
     </style>
     
@@ -58,29 +59,14 @@ body {
     </div>
 <div>
 
-<?php
 
-$servername = "gjosse.nl.mysql";
-$username = "gjosse_nl";
-$password = "bcJ7UEPx";
-$dbname = "gjosse_nl";
-
-
-
-
-
-</div>
 <div class="info">
-<h5> <center><b>To join this Tribe send them an invite, they might not accept you.</b></center>
+<h5><center><b>To join this Tribe send them an invite, they might not accept you.</b></center>
 <center><b>Otherwise start your own Tribe, this can be done from your profile.</b></center></h5>
 </div>      
 
-<!--<script src="js/statstable.js"></script>
--->  
 
 
-	<script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
-    
     <div class="footer">
 	<?php require('phpfiles/footer.php'); ?>
 	</div>
