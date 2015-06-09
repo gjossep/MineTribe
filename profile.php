@@ -42,7 +42,7 @@ if ($conn->connect_error) {
     echo (" Connection failed: " . $conn->connect_error);
 } 
 //Ask the database to give me the stats and rank for the username of either the requested user or the logged in one. This is deterimend by the above script. The $username
-$sql = "SELECT display_name, stats, rank FROM uf_users WHERE user_name='".$username."';";
+$sql = "SELECT display_name, friends, stats, rank FROM uf_users WHERE user_name='".$username."';";
 
 $result = $conn->query($sql);
 
@@ -52,6 +52,9 @@ while($row = $result->fetch_assoc()) {
 	
 	$statsRaw = $row["stats"];
 	$stats = explode(',', $statsRaw);
+	
+	$friendsRaw = $row["friends"];
+	$friends = explode(',', $friendsRaw);
 	
 	$rank = $row['rank'];
 	

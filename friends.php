@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>stats</title>	
+	<title>friends</title>	
 	<?php require('phpfiles/head.php'); ?>
 	<!-- Add Any other css you want here -->
 	<link href="css/tribeleader/stats.css" rel="stylesheet" type="text/css" />
