@@ -16,7 +16,18 @@
 		table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
     		content: " \25B4\25BE" 
 		}
-	</style>
+	.tribe h1 center {
+	color: #FFF;
+	background-color: #000;
+	padding-top: 20px;
+	padding-bottom:20px;
+}
+    .footer {
+	background-color: #CCC;
+	
+}
+
+    </style>
 	</head>
 	<body>
     	<?php require('phpfiles/header.php'); ?>
@@ -103,8 +114,9 @@ $conn->close();
 
 <!--<script src="js/statstable.js"></script>
 -->
-    <?php require('phpfiles/footer.php'); ?>
-	
+    <div class="footer">
+	<?php require('phpfiles/footer.php'); ?>
+	</div>
 	
 </body>
 </html>
