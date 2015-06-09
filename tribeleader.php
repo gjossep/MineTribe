@@ -64,6 +64,9 @@ require_once("models/config.php");
   			background: #990001;
 			color:#FFF
 		}
+		table {
+			  border-bottom: 2px solid #990001;
+		}
 		
     .sortable tr td img {
 	background:#666;

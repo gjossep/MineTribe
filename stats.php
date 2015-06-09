@@ -37,6 +37,9 @@
 	padding-top:10px;
 	padding-bottom:10px;
 }
+table {
+	  border-bottom: 2px solid #06F;
+}
 
     </style>
 	</head>

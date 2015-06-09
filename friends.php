@@ -35,8 +35,8 @@
 }
 
 	table th {
-  	background: #990001;
-	color:#FFF
+  	background: #03B600;
+	color:#FFF;
 }
 
 body {
@@ -46,6 +46,9 @@ body {
 	background-position: center bottom;
 }
 
+table {
+	  border-bottom: 2px solid #990001;
+}
 
     </style>
 	</head>
