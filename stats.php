@@ -105,7 +105,29 @@ $result = $conn->query($sql);
 
 $conn->close();
 	
+	
+	for($i = 0; $i <20; $i++) {
+		echo "<tr>";
+		
+			echo "<td>Rank</td>";
+			echo "<td>NAME</td>";
+		
+			echo "<td>1</td>";
+			echo "<td>2</td>";
+			echo "<td>3</td>";
+			echo "<td>4</td>";
+			echo "<td>5</td>";
+			echo "<td>6</td>";
+			echo "<td>7</td>";
+		
+			echo "</tr>";
+			
+	}
+	
 	?>
+    
+    
+    
   </tbody>
 </table>
 

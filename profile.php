@@ -2,6 +2,77 @@
 
 require_once("models/config.php");
 
+
+if(isset($_GET['user'])) {
+	
+	$username = $_GET['user'];
+	if(!userNameExists($username)) {
+		
+ 		if(isUserLoggedIn()) { 	
+		
+			header("Location: profile.php");
+			die();
+			
+		} else {
+			
+			header("Location: index.php");
+			die();	
+		}
+	}
+
+} else {
+	
+	if(isUserLoggedIn()) { 
+		$username = $loggedInUser->username;	
+	} else {	
+		header("Location: index.php");
+		die();	
+	}
+}
+
+//After that whole script we will get the stats now.
+
+$servername = "gjosse.nl.mysql";
+$usernameDB = "gjosse_nl";
+$password = "bcJ7UEPx";
+$dbname = "gjosse_nl";
+
+$conn = new mysqli($servername, $usernameDB, $password, $dbname);
+if ($conn->connect_error) {
+    echo (" Connection failed: " . $conn->connect_error);
+} 
+//Ask the database to give me the stats and rank for the username of either the requested user or the logged in one. This is deterimend by the above script. The $username
+$sql = "SELECT display_name, stats, rank FROM uf_users WHERE user_name='".$username."';";
+
+$result = $conn->query($sql);
+
+
+//Loop over all the rows it found, but because we only gave one username value it will only have one row. 
+while($row = $result->fetch_assoc()) {
+	
+	$statsRaw = $row["stats"];
+	$stats = explode(',', $statsRaw);
+	
+	$rank = $row['rank'];
+	
+	$displayName = $row['display_name'];
+	
+	// You have to get the other stats, ill just give two examples below.
+	
+	$statDistanceCrouched = $stats[7];
+	$statDistanceSprinted = $stats[8];
+	$statDistanceSwum = $stats[9];
+	$statDistanceFall = $stats[10];
+	$statDistanceClimbed = $stats[11];
+	$statUnderWater = $stats[12];	
+	$statDistanceMinecart = $stats[13];
+	$statDistanceBoat = $stats[14];
+	$statJump = $stats[15];
+	$statFishCaught = $stats[16];
+	
+}
+
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -254,119 +325,7 @@ require_once("models/config.php");
 
 	<body>
     <?php require('phpfiles/header.php'); ?>
-    
-    <p>
-    <?php 
-	
-	if(isset($_GET['user'])) {
-	
-	$username = $_GET['user'];
-	echo " USERNAME: ".$username;
-	if(userNameExists($username)) {
-		echo " exists! ";
-		
-		$userdetails = fetchUserAuthByDisplayName($username);
-		$displayName = $userdetails->displayname;
-		echo " DISPLAYNAME: ".$displayName;
-		/*	
-			//User examples
-			
-			How to acces the data: $userdetails email;
-			
-			Things you can do instead of email:
-			 -email
-			 -id
-			 -password
-			 -title
-			 -display_name
-			 -user_name
-			
-			*/
-			
-	} else {
-		
- 		if(isUserLoggedIn()) { 	
-		
-			header("Location: profile.php");
-			die();
-			
-		} else {
-			
-			header("Location: index.php");
-			die();	
-		}
-	}
 
-} else {
-	
-	if(isUserLoggedIn()) { 
-		echo " logged in user not exist:";
-		$username = $loggedInUser->username;	
-	} else {
-		
-		header("Location: index.php");
-		die();	
-	}
-}
-
-//After that whole script we will get the stats now.
-
-$servername = "gjosse.nl.mysql";
-$usernameDB = "gjosse_nl";
-$password = "bcJ7UEPx";
-$dbname = "gjosse_nl";
-
-$conn = new mysqli($servername, $usernameDB, $password, $dbname);
-if ($conn->connect_error) {
-    echo (" Connection failed: " . $conn->connect_error);
-} 
-echo " USERNAME2:".$username;
-//Ask the database to give me the stats and rank for the username of either the requested user or the logged in one. This is deterimend by the above script. The $username
-$sql = "SELECT display_name, stats, rank FROM uf_users WHERE user_name='".$username."';";
-echo " QUERY: ".$sql;
-
-$result = $conn->query($sql);
-echo " ROWS:".$result->num_rows;
-
-
-//Loop over all the rows it found, but because we only gave one username value it will only have one row. 
-while($row = $result->fetch_assoc()) {
-	
-	$statsRaw = $row["stats"];
-	$stats = explode(',', $statsRaw);
-	
-	$rank = $row['rank'];
-	
-	$displayName = $row['display_name'];
-	
-	// You have to get the other stats, ill just give two examples below.
-	
-	$statDistanceCrouched = $stats[7];
-	$statDistanceSprinted = $stats[8];
-	$statDistanceSwum = $stats[9];
-	$statDistanceFall = $stats[10];
-	$statDistanceClimbed = $stats[11];
-	$statUnderWater = $stats[12];	
-	$statDistanceMinecart = $stats[13];
-	$statDistanceBoat = $stats[14];
-	$statJump = $stats[15];
-	$statFishCaught = $stats[16];
-	
-}
-
-echo " STATS ".$statsRaw;
-	
-	/*
-	
-	To add these stats to HTML just use <?php $statPlayTime ?> to put them in anywhere.
-	
-	To get anyvalue you see here into HTML just use <?php (then the id of the thing you want, these all start with a doller sign) ?>
-	
-	*/
-
-	
-	?>
-    </p>
 
     <div class="Profile">
       <h1>
@@ -441,13 +400,13 @@ echo " STATS ".$statsRaw;
 					  </div>
 					  
 	    			  <!-- ===== Second Tab TRIBE ===== -->
-		<div class="tab-pane" id="profile">
+		
 		<?php if(isUserLoggedIn()) {            
 		  
 		  		if(!isset($_GET['user']))  {
 		?> 
                       		<!-- if user himself GOES TO IT himself and no tribe-->
-                  			
+                  			<div class="tab-pane" id="profile">
 					  		<h2><center>No tribe yet!</center></h2>
 							<hr />
                        	 	<h4> <center> Create a tribe with your friends or join your friends tribe! </center> </h4>
@@ -632,6 +591,7 @@ echo " STATS ".$statsRaw;
                      </tr>                                                                    
                 </table>
                 <hr />
+                </div>
 
      </div>
          <!-- Bootstrap core JavaScript

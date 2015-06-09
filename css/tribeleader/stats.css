@@ -37,5 +37,6 @@ table th.last {
 body {
 	background-image: url(/img/backgroundstats.png);
 	background-repeat: no-repeat;
-    background-attachment: fixed;
+	background-attachment: fixed;
+	background-position: center bottom;
 }
