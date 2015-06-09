@@ -61,21 +61,38 @@ require_once("models/config.php");
     		content: " \25B4\25BE"
 		}
 		table th {
-  			background: #C33;
+  			background: #990001;
+			color:#FFF
 		}
 		
     .sortable tr td img {
 	background:#666;
 }
     .tribe h1 {
-		color:#C33;
+	color: #C00;
+	background-color: #000;
+	padding-top: 20px;
+	padding-bottom:20px;
 }
 
 body {
 	background-image: url(/img/backgroundtribe.png);
 	background-repeat: no-repeat;
-    background-attachment: fixed;
-	position: bottom;
+	background-attachment: fixed;
+	background-position: center bottom;
+}
+
+.footer {
+	background:#900;
+	color:#000;
+}
+
+   
+    .info h5 {
+	color: #FFF;
+	background-color: #990001;
+	padding-top:10px;
+	padding-bottom:10px;
 }
     </style>
     
@@ -141,8 +158,7 @@ $result = $conn->query($sql);
 		
 			echo "<td>".$stats[TRIBEPVPKILLS]."</td>";
 			echo "<td>".$stats[NUMBEROFMEMBERS]."</td>";
-    		<td><img class="images/tribecover/tribedefault.jp" alt="cover photo of tribe"</td>
-		
+    		echo "<td>".$stats[SOMEHOW-IMAGE-OF-TRIBE]."</td>";		
 			echo "</tr>";
 		}
 		
@@ -156,17 +172,23 @@ $conn->close();
   </tbody>
 </table>
 
-<p> <center><b>Want to join a tribe? Click on a tribe you like to go to their page and send an invite! They need to accept you in order to get into the tribe.</b></center></p>
-<p> <center><b>Or start your own tribe with your Minecraft friends and try to become the #1 tribe!</b></center></p>
+
+
 </div>
-          
+<div class="info">
+<h5> <center><b>Want to join a tribe? Click on a tribe you like, to go to their page, and send an invite! They need to accept you in order for you to get into the tribe.</b></center>
+<center><b>Or start your own tribe with your Minecraft friends and try to become the #1 tribe!</b></center></h5>
+</div>      
 
 <!--<script src="js/statstable.js"></script>
 -->  
 
 
 	<script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
-    <?php require('phpfiles/footer.php'); ?>
+    
+    <div class="footer">
+	<?php require('phpfiles/footer.php'); ?>
+	</div>
 	
 	
     
