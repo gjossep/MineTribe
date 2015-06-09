@@ -1,123 +1,6 @@
 <?php 
 
-//Gets all the loggedIn account system. 
 require_once("models/config.php");
-
-//This checks the data from the ?user= exists. So if its just profile.php it will return false here.
-if(isset($_GET['user'])) {
-	
-	//This gets the value of the ?user= in the url.
-	$username = $_GET['user'];
-
-	//Checks if thats a real user.
-	if(userNameExists($username)) {
-		//If it does, lets get the user account details.
-		$userdetails = fetchUserAuthByDisplayName($username);
-		$displayName = $userdetails->display_username;
-			//User examples
-			/*
-			How to acces the data: $userdetails email;
-			
-			Things you can do instead of email:
-			 -email
-			 -id
-			 -password
-			 -title
-			 -display_name
-			 -user_name
-			
-			*/
-			
-	//So its not a real user.
-	} else {
-		
-		//Check if logged in.
- 		if(isUserLoggedIn()) { 	
-		
-			//If we are logged in, lets go the profile.php page without any ?user=
-			header("Location: profile.php");
-			//Stops the rest of the page loading so it saves time.
-			die();
-			
-		//So not logged in.
-		} else {
-			
-			//Lets go back to the home page then.
-			header("Location: index.php");
-			die();	
-		}
-	}
-
-//So the ?user= field is empty or doesnt exist.
-} else {
-	
-	//Check if the user is logged in
-	if(isUserLoggedIn()) { 
-	
-		//They are so lets get the logged-in user's uuid or username.
-		$username = $loggedInUser -> user_name;	
-	
-	//Not logged in then.
-	} else {
-		
-		//Fuck you go home.
-		header("Location: index.php");
-		die();	
-	}
-}
-
-//After that whole script we will get the stats now.
-
-//Sets up the database connection.
-$servername = "gjosse.nl.mysql";
-$username = "gjosse_nl";
-$password = "bcJ7UEPx";
-$dbname = "gjosse_nl";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-//Ask the database to give me the stats and rank for the username of either the requested user or the logged in one. This is deterimend by the above script. The $username
-$sql = "SELECT stats, rank FROM uf_users WHERE user_name=".$username;
-
-//Look at what the database as replied.
-$result = $conn->query($sql);
-
-//Loop over all the rows it found, but because we only gave one username value it will only have one row. 
-$row = mysql_fetch_assoc($result);
-	
-	//Get the long stats data that looks like: 1,2,3,4,5
-	$statsRaw = $row["stats"];
-	
-	//Explode or divide the data by the commas so we can get individal stats values. This will return a array of stats, to get the one we want we have to do $stats[statNumber]
-	$stats = explode(',', $statsRaw);
-	
-	//Get and store rank as a value. 
-	$rank = $row['rank'];
-	
-	// You have to get the other stats, ill just give two examples below.
-	
-	$statDistanceCrouched = $stats[7];
-	$statDistanceSprinted = $stats[8];
-	$statDistanceSwum = $stats[9];
-	$statDistanceFall = $stats[10];
-	$statDistanceClimbed = $stats[11];
-	$statUnderWater = $stats[12];	
-	$statDistanceMinecart = $stats[14];
-	$statDistanceBoat = $stats[14];
-	$statJump = $stats[15];
-	$statFishCaught = $stats[16];
-	
-	/*
-	
-	To add these stats to HTML just use <?php $statPlayTime ?> to put them in anywhere.
-	
-	To get anyvalue you see here into HTML just use <?php (then the id of the thing you want, these all start with a doller sign) ?>
-	
-	*/
-
-
 
 ?>
 
@@ -372,6 +255,119 @@ $row = mysql_fetch_assoc($result);
 	<body>
     <?php require('phpfiles/header.php'); ?>
     
+    <p>
+    <?php 
+	
+	if(isset($_GET['user'])) {
+	
+	$username = $_GET['user'];
+	echo " USERNAME: ".$username;
+	if(userNameExists($username)) {
+		echo " exists! ";
+		
+		$userdetails = fetchUserAuthByDisplayName($username);
+		$displayName = $userdetails->displayname;
+		echo " DISPLAYNAME: ".$displayName;
+		/*	
+			//User examples
+			
+			How to acces the data: $userdetails email;
+			
+			Things you can do instead of email:
+			 -email
+			 -id
+			 -password
+			 -title
+			 -display_name
+			 -user_name
+			
+			*/
+			
+	} else {
+		
+ 		if(isUserLoggedIn()) { 	
+		
+			header("Location: profile.php");
+			die();
+			
+		} else {
+			
+			header("Location: index.php");
+			die();	
+		}
+	}
+
+} else {
+	
+	if(isUserLoggedIn()) { 
+		echo " logged in user not exist:";
+		$username = $loggedInUser->username;	
+	} else {
+		
+		header("Location: index.php");
+		die();	
+	}
+}
+
+//After that whole script we will get the stats now.
+
+$servername = "gjosse.nl.mysql";
+$usernameDB = "gjosse_nl";
+$password = "bcJ7UEPx";
+$dbname = "gjosse_nl";
+
+$conn = new mysqli($servername, $usernameDB, $password, $dbname);
+if ($conn->connect_error) {
+    echo (" Connection failed: " . $conn->connect_error);
+} 
+echo " USERNAME2:".$username;
+//Ask the database to give me the stats and rank for the username of either the requested user or the logged in one. This is deterimend by the above script. The $username
+$sql = "SELECT display_name, stats, rank FROM uf_users WHERE user_name='".$username."';";
+echo " QUERY: ".$sql;
+
+$result = $conn->query($sql);
+echo " ROWS:".$result->num_rows;
+
+
+//Loop over all the rows it found, but because we only gave one username value it will only have one row. 
+while($row = $result->fetch_assoc()) {
+	
+	$statsRaw = $row["stats"];
+	$stats = explode(',', $statsRaw);
+	
+	$rank = $row['rank'];
+	
+	$displayName = $row['display_name'];
+	
+	// You have to get the other stats, ill just give two examples below.
+	
+	$statDistanceCrouched = $stats[7];
+	$statDistanceSprinted = $stats[8];
+	$statDistanceSwum = $stats[9];
+	$statDistanceFall = $stats[10];
+	$statDistanceClimbed = $stats[11];
+	$statUnderWater = $stats[12];	
+	$statDistanceMinecart = $stats[13];
+	$statDistanceBoat = $stats[14];
+	$statJump = $stats[15];
+	$statFishCaught = $stats[16];
+	
+}
+
+echo " STATS ".$statsRaw;
+	
+	/*
+	
+	To add these stats to HTML just use <?php $statPlayTime ?> to put them in anywhere.
+	
+	To get anyvalue you see here into HTML just use <?php (then the id of the thing you want, these all start with a doller sign) ?>
+	
+	*/
+
+	
+	?>
+    </p>
+
     <div class="Profile">
       <h1>
         <center>
@@ -401,8 +397,8 @@ $row = mysql_fetch_assoc($result);
 	    			  <!-- ===== First Tab PROFILE ===== -->
 					  <div class="tab-pane active" id="about">
 
-					  	<h3><?php $dispayName ?></h3>
-					  	<h4>Rank <?php $rank ?></h4>
+					  	<h3><?php echo $displayName; ?></h3>
+					  	<h4>Rank <?php echo $rank; ?></h4>
 					  	<hr></hr>                       
           <?php if(isUserLoggedIn()) {            
 		  
@@ -525,7 +521,7 @@ $row = mysql_fetch_assoc($result);
                             Distance Crouched
                         </td>
                         <td>
-                            <?php $statDistanceCrouched ?>
+                            <?php echo $statDistanceCrouched; ?>
                         </td>
                     </tr>
                     <tr>
@@ -533,7 +529,7 @@ $row = mysql_fetch_assoc($result);
                             Distance Sprinted
                         </td>
                         <td>
-                            <?php $statDistanceSprinted ?>
+                            <?php echo $statDistanceSprinted; ?>
                         </td>
                     </tr>
                     <tr>
@@ -541,7 +537,7 @@ $row = mysql_fetch_assoc($result);
                             Distance Swum
                         </td>
                         <td>
-                            <?php $statDistanceSwum ?>
+                            <?php echo $statDistanceSwum; ?>
                         </td>
                     </tr>
                     <tr>
@@ -549,7 +545,7 @@ $row = mysql_fetch_assoc($result);
                             Distance Fallen
                         </td>
                         <td>
-                            <?php $statDistanceFall ?>
+                            <?php echo $statDistanceFall; ?>
                         </td>
                     </tr>
                     <tr>
@@ -557,7 +553,7 @@ $row = mysql_fetch_assoc($result);
                             Distance Climbed
                         </td>
                         <td>
-                            <?php $statDistanceClimbed ?>
+                            <?php echo $statDistanceClimbed; ?>
                         </td>
                     </tr>
                     <tr>
@@ -565,7 +561,7 @@ $row = mysql_fetch_assoc($result);
                             Distance Underwater
                         </td>
                         <td>
-                            <?php $statDistanceCrouched ?>
+                            <?php echo $statUnderWater; ?>
                         </td>
                     </tr>   
                     <tr>
@@ -573,7 +569,7 @@ $row = mysql_fetch_assoc($result);
                             Distance by Boat
                         </td>
                         <td>
-                            <?php $statDistanceBoat ?>
+                            <?php echo $statDistanceBoat; ?>
                         </td>
                     </tr> 
                     <tr>
@@ -581,7 +577,7 @@ $row = mysql_fetch_assoc($result);
                             Distance by Minecart
                         </td>
                         <td>
-                            <?php $statDistanceMinecart ?>
+                            <?php echo $statDistanceMinecart; ?>
                         </td>
                     </tr> 
                     <tr>
@@ -589,14 +585,14 @@ $row = mysql_fetch_assoc($result);
                             Amount of Jumps
                         </td>
                         <td>
-                            <?php $statJump ?>
+                            <?php echo $statJump; ?>
                         </td>
                     </tr>                    <tr>
                         <td >
                             Fish Caught
                         </td>
                         <td>
-                            <?php $statFishCaught ?>
+                            <?php echo $statFishCaught; ?>
                         </td>
                     </tr>                                                                                                                  
                 </table>
