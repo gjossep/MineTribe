@@ -407,7 +407,7 @@ $row = mysql_fetch_assoc($result);
           <?php if(isUserLoggedIn()) {            
 		  
 		  			if(!isset($_GET['user']))  {
-		  ?>     
+		  ?>     				
            						<h4> <center> ADD MORE FRIENDS </center> </h4>
                 				<hr />
                 				<img src="img/addfriend.png" alt="tribedefault" height="310" width="310"/>

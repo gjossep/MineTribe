@@ -49,22 +49,120 @@ require_once("models/config.php");
                 adapter: new DemoAdapter()
             });
         });
+		
+		
+    
     </script>
 	<?php require('phpfiles/head.php'); ?>
+	<link href="css/tribeleader/stats.css" rel="stylesheet" type="text/css" />
+	<script src="js/sorttable.js"></script>
+	<style>
+		table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    		content: " \25B4\25BE"
+		}
+		table th {
+  			background: #C33;
+		}
+		
+    .sortable tr td img {
+	background:#666;
+}
+    .tribe h1 {
+		color:#C33;
+}
+    </style>
+    
 	</head>
 
-	<body>
-    <?php require('phpfiles/header.php'); ?>
+<body>
+    	<?php require('phpfiles/header.php'); ?>
+    <!--<script src="js/statstable.js"></script>-->
     <div class="tribe">
       <h1>
         <center>
-          Tribe Leaderboards
+          Tribes
         </center>
       </h1>
     </div>
-            
-    </div>
-    <script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
+<div>
+
+<?php
+
+$servername = "gjosse.nl.mysql";
+$username = "gjosse_nl";
+$password = "bcJ7UEPx";
+$dbname = "gjosse_nl";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$sql = "SELECT user_name, display_name, stats, rank FROM uf_users";
+$result = $conn->query($sql);
+
+
+
+?>
+
+<table class="sortable">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Tribe</th>
+      
+      <th>Pvp Kills</th>      
+      <th>Members</th>
+      <th>Emblem</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
+	
+	if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		$statsRaw = $row["stats"];
+		$stats = explode(',', $statsRaw);
+		
+		if($row["rank"] != 0) {
+		
+			echo "<tr>";
+		
+			echo "<td>".$row["ranktribe"]."</td>";
+			echo "<td><a href='profile.php?user=".$row["tribe_name"]."'>".$row["tribe_name"]."</a></td>";
+		
+			echo "<td>".$stats[TRIBEPVPKILLS]."</td>";
+			echo "<td>".$stats[NUMBEROFMEMBERS]."</td>";
+    		<td><img class="images/tribecover/tribedefault.jp" alt="cover photo of tribe"</td>
+		
+			echo "</tr>";
+		}
+		
+    }
+} 
+
+$conn->close();
+	
+	?>
+
+  </tbody>
+</table>
+
+<p> <center><b>Want to join a tribe? Click on a tribe you like to go to their page and send an invite! They need to accept you in order to get into the tribe.</b></center></p>
+<p> <center><b>Or start your own tribe with your Minecraft friends and try to become the #1 tribe!</b></center></p>
+</div>
+          
+
+<!--<script src="js/statstable.js"></script>
+-->  
+
+
+	<script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
     <?php require('phpfiles/footer.php'); ?>
+	
+	
+    
 </body>
 </html>
+

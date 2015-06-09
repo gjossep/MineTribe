@@ -1016,9 +1016,10 @@ select {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 0px;
+	margin-left: 0px;
 	margin-bottom: 0px;
+	position: relative;
 }
 :after, :before {
 	-webkit-box-sizing: border-box;
@@ -1794,7 +1795,8 @@ pre code {
 	width: 41.66666667%
 }
 .col-md-4 {
-	width: 33.33333333%
+	width: 33.33333333%;
+	padding-left: 0px;
 }
 .col-md-3 {
 	width: 25%
