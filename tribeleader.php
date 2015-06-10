@@ -138,40 +138,35 @@ $result = $conn->query($sql);
       
       <th>Pvp Kills</th>      
       <th>Members</th>
-      <th>Emblem</th>
 
 
     </tr>
   </thead>
   <tbody>
-    <?php 
+    
+	<?php 
 	
 	if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-		$statsRaw = $row["stats"];
-		$stats = explode(',', $statsRaw);
 		
 		if($row["rank"] != 0) {
 		
 			echo "<tr>";
 		
 			echo "<td>".$row["ranktribe"]."</td>";
-			echo "<td><a href='profile.php?user=".$row["tribe_name"]."'>".$row["tribe_name"]."</a></td>";
+			echo "<td>".$row["tribename"]."</td>";
 		
-			echo "<td>".$stats[TRIBEPVPKILLS]."</td>";
-			echo "<td>".$stats[NUMBEROFMEMBERS]."</td>";
-    		echo "<td>".$stats[SOMEHOW-IMAGE-OF-TRIBE]."</td>";		
+			echo "<td>".$stats["totalpvpkills"]."</td>";
+			echo "<td>".$stats["totalmembers"]."</td>";	
+			
 			echo "</tr>";
 		}
 		
     }
-} 
-
-$conn->close();
+}
+ 	?>
 	
-	?>
-
   </tbody>
 </table>
 
@@ -183,8 +178,8 @@ $conn->close();
 <center><b>Or start your own tribe with your Minecraft friends and try to become the #1 tribe!</b></center></h5>
 </div>      
 
-<!--<script src="js/statstable.js"></script>
--->  
+<script src="js/statstable.js"></script>
+ 
 
 
 	<script src="chatjs-gh-pages/javascripts/scale.fix.js"></script>
