@@ -12,13 +12,13 @@ var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-default' ),
-		didScroll = false,
+		didScroll = true,
 		changeHeaderOn = 300;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
 			if( !didScroll ) {
-				didScroll = true;
+				didScroll = false;
 				setTimeout( scrollPage, 250 );
 			}
 		}, false );

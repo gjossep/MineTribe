@@ -63,11 +63,6 @@ if(isUserLoggedIn()) {
             
             </select>
             <br />
-            <p>Gender</p>
-           	    <div class="gender">
-                    <input type="radio" name="gender" value="male">  Male</input>
-                    <input type="radio" name="gender" value="female"> Female</input>
-               </div>
 
              
             <input type="submit" id="submit" value="Register" />
