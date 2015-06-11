@@ -43,6 +43,13 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+    .main {
+	color: #000;
+	background-color: #FFF;
+	margin-right: 25%;
+	margin-left: 25%;
+	position:relative;
+}
     </style>
     
 	</head>
@@ -57,7 +64,10 @@ body {
         </center>
       </h1>
     </div>
-<div>
+    
+	<div class="main">
+    <img src="/img/cover/coverdefault.png" alt="cover photo tribe" style="width:1050px;height:800x;">
+    </div>
 
 
 <div class="info">
