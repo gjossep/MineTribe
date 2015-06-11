@@ -18,7 +18,7 @@
 		}
 	.tribe h1 center {
 	color: #FFF;
-	background-color: #000;
+	background-color: #F93;
 	padding-top: 20px;
 	padding-bottom:20px;
 }
@@ -27,18 +27,25 @@
 	
 }
 	table th {
-  		background: #C3C;
+  		background: #F93;
 		color:#FFF;
 	}
     
 	.info h5 {
 	color: #FFF;
-	background-color: #C3C;
+	background-color: #F93;
 	padding-top:10px;
 	padding-bottom:10px;
 }
 table {
 	  border-bottom: 2px solid #06F;
+}
+
+body {
+	background-image: url(/img/backgroundservers.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center bottom;
 }
 
     </style>
