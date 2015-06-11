@@ -77,7 +77,7 @@ if(isUserLoggedIn()) {
                         <a class="page-scroll" href="/login.php">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/register.php">Register</a>
+                        <a class="page-scroll" href="/pricetable.php">Register</a>
                     </li>
                 </ul>
             </div>
