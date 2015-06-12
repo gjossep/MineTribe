@@ -9,6 +9,7 @@
     <meta name="author" content="">
 
     <title>MineTribe</title>
+    <link rel="shortcut icon" href="img/favicon.png type="image/png" />
 <?php require('phpfiles/head.php'); ?>
 
 <!-- Add Any other css you want here -->
