@@ -6,11 +6,11 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-twitter"></i></a>
+                        <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-facebook"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -18,8 +18,10 @@
                     <ul class="list-inline quicklinks">
                         <li><a href="privacypolicy.php" target="_blank">Privacy Policy</a>
                         </li>
-                        <li><a href="termsofuse.php" target="_blank">Terms of Use</a>
-                        </li>
+                        <li><a href="termsofuse.php" target="_blank">Terms of Use</a></li>
+						<li>
+                        <a href="https://www.facebook.com/minetribeofficial?ref=hl target="_blank">Facebook Page</a>
+                   	 </li>   
                     </ul>
                 </div>
             </div>

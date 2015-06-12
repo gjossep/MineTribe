@@ -37,10 +37,10 @@ if(isUserLoggedIn()) {
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Tribe</a>
-                    </li>
+                    </li>                      
                     <li>
                         <a class="page-scroll" href="../account/logout.php">Logout</a>
-                    </li>
+                    </li>	                 
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -72,7 +72,7 @@ if(isUserLoggedIn()) {
                     </li>
                     <li>
                         <a class="page-scroll" href="/index.php">Home</a>
-                    </li>
+                    </li>                    
                     <li>
                         <a class="page-scroll" href="/login.php">Login</a>
                     </li>
