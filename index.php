@@ -16,7 +16,6 @@
 </head>
 
 <body id="page-top" class="index">
-
 <?php require('phpfiles/header.php'); ?>
 
     <!-- Services Section -->

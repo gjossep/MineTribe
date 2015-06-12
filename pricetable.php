@@ -42,9 +42,10 @@
 .background {
 	background:url(img/backgroundpricetable.png);
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment:fixed;
 	background-position: center bottom;
 }
+
 </style>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,6 +55,7 @@
       <![endif]-->
 </head>
     <body background="img/backgroundpricetable.png">
+        <?php require('phpfiles/header.php'); ?>
 <div class="container">
       <h1 class="page-header">Join MineTribe</h1>
       <p>&nbsp;</p>
@@ -135,7 +137,9 @@
     </div>
 <div class="bottom">
 
-      <?php require('phpfiles/footer.php'); ?>
-    </div>
+
+    </div>     
+    <?php require('phpfiles/footer.php'); ?>
+
 </body>
 </html>
