@@ -13,6 +13,7 @@
     <!-- Custom styles for this template -->
     <link href="css/pricetable/main.css" rel="stylesheet">
 <style type="text/css">
+
 .info {
 	color: #000;
 	background-color: #FFF;
@@ -32,15 +33,17 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 10px;
-	color:#FFF
+	color:#FFF;
+	border-bottom:0px;
+	
 }
 
-.container {
-	background: #E1E1E1;
-}
 
-.page {
+.background {
 	background:url(img/backgroundpricetable.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center bottom;
 }
 </style>
 
@@ -50,8 +53,7 @@
       <script src="js/respond.min.js"></script>
       <![endif]-->
 </head>
-<div class="page">
-    <body>
+    <body background="img/backgroundpricetable.png">
 <div class="container">
       <h1 class="page-header">Join MineTribe</h1>
       <p>&nbsp;</p>
@@ -65,6 +67,10 @@
         <li> <strong>Adding Friends</strong> No Limit
             <li> <strong>Create a Tribe</strong> Limited Members </li>
         <li> <strong>Customize Tribe Page</strong> Limited </li>
+        </li>
+            <li> <strong>Profile</strong></li>
+        </li>
+            <li> <strong>Upgrade at any time</strong> </li>
         </li>
         <li class="plan-action"> <a href="/register.php" class="btn btn-danger btn-lg">Register</a> </li>
       </ul>
@@ -87,7 +93,7 @@
           <ul class="plan plan2 featured">
         <li class="plan-name"> Khanewar </li>
         <li class="plan-price"> <strong>$6</strong> / monthly subscription </li>
-        <li> <strong>All Oulad Perks</strong> </li>
+        <li> <strong>All Perks</strong> </li>
         <li> <strong>Khanewar Titel infront of your name</strong> </li>
         <li> <strong>Join up to 3 Tribes</strong> </li>
         <li class="plan-action"> <a href="#" class="btn btn-danger btn-lg">Register</a> </li>
@@ -128,8 +134,8 @@
       <hr>
     </div>
 <div class="bottom">
+
       <?php require('phpfiles/footer.php'); ?>
-    </div>
     </div>
 </body>
 </html>
