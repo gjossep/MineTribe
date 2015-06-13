@@ -10,11 +10,7 @@ if(isUserLoggedIn()) {
 
     <!-- Navigation -->
     <link rel="icon" type="img/ico" href="img/favicon.png">
-    <style type="text/css">
-    .navbar.navbar-default.navbar-fixed-top .container #bs-example-navbar-collapse-1 .nav.navbar-nav.navbar-right li .page-scroll {
-	color: #000;
-}
-    </style>
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
