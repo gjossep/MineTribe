@@ -50,6 +50,19 @@ body {
 	margin-left: 25%;
 	position:relative;
 }
+		table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    		content: " \25B4\25BE" 
+		}
+	
+	table th {
+  		background: #F93;
+		color:#FFF;
+	}
+    
+table {
+	  border-bottom: 2px solid #06F;
+}
+
     </style>
     
 	</head>
@@ -66,8 +79,80 @@ body {
     </div>
     
 	<div class="main">
-    <img src="/img/cover/coverdefault.png" alt="cover photo tribe" style="width:1050px;height:800x;">
-    </div>
+    <img src="/img/cover/coverdefault.png" alt="cover photo tribe" style="width: 100%; height: 20%;">
+  
+  
+  
+  <?php
+
+$servername = "gjosse.nl.mysql";
+$username = "gjosse_nl";
+$password = "bcJ7UEPx";
+$dbname = "gjosse_nl";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$sql = "SELECT name, ip FROM uf_servers";
+$result = $conn->query($sql);
+
+
+
+?>
+
+<table class="sortable">
+  <thead>
+    <tr>
+      <th>Members</th>
+      <th>Rank</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
+	
+	if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+	
+			echo "<tr>";
+		
+			echo "<td>".$row["tribeuser"]."</td>";
+			echo "<td>".$row["rank"]."</td>";
+		
+			echo "</tr>";
+		
+		
+    }
+} 
+
+$conn->close();
+	
+	
+	for($i = 0; $i <5; $i++) {
+		echo "<tr>";
+		
+			echo "<td>servers</td>";
+			echo "<td>ip</td>";
+			
+			echo "</tr>";
+			
+	}
+	
+	?>
+    
+    
+    
+  </tbody>
+</table>
+    
+    
+    
+    
+    
+    
+</div>
+
 
 
 <div class="info">

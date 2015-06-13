@@ -37,7 +37,7 @@ if(isUserLoggedIn()) {
                         <a class="page-scroll" href="/profile.php">Profile</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Tribe</a>
+                        <a class="page-scroll" href="/tribe.php">Tribe</a>
                     </li>                      
                     <li>
                         <a class="page-scroll" href="../account/logout.php">Logout</a>
