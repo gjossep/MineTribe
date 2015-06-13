@@ -55,7 +55,7 @@
       <![endif]-->
 </head>
     <body background="img/backgroundpricetable.png">
-        <?php require('phpfiles/header.php'); ?>
+       
 <div class="container">
       <h1 class="page-header">Join MineTribe</h1>
       <p>&nbsp;</p>
