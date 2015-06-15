@@ -10,15 +10,15 @@
  */
 var cbpAnimatedHeader = (function() {
 
-	var docElem = document.documentElement,
+var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-default' ),
-		didScroll = true,
+		didScroll = false,
 		changeHeaderOn = 300;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
 			if( !didScroll ) {
-				didScroll = false;
+				didScroll = true;
 				setTimeout( scrollPage, 250 );
 			}
 		}, false );

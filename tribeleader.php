@@ -129,6 +129,19 @@ $result = $conn->query($sql);
 		
     }
 }
+
+$conn->close();
+	
+	
+	for($i = 0; $i <19; $i++) {
+		echo "<tr>";
+		
+			echo "<td>servers</td>";
+			echo "<td>ip</td>";
+			
+			echo "</tr>";
+			
+	}
  	?>
 	
   </tbody>
