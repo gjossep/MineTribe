@@ -46,7 +46,7 @@ body {
 	background-image: url(/img/backgroundtribe.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center bottom;
+	background-position: center top;
 }
 
 .footer {
