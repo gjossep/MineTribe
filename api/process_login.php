@@ -152,7 +152,7 @@ if(count($errors) == 0)
                 $loggedInUser->csrf_token(true);
                 
                 $_SESSION["userCakeUser"] = $loggedInUser;
-                
+                echo "User: ".$loggedInUser->username;
                 $successes = array();
                 $successes[] = "Welcome back, " . $loggedInUser->displayname;
             }
@@ -164,7 +164,6 @@ restore_error_handler();
 
 foreach ($errors as $error){
   addAlert("danger", $error);
-  echo $error;
 }
 foreach ($successes as $success){
   addAlert("success", $success);
@@ -173,7 +172,7 @@ foreach ($successes as $success){
 if (count($errors) > 0){
     apiReturnError($ajax, SITE_ROOT . "/login.php?error=".$error);
 } else {
-    apiReturnSuccess($ajax, SITE_ROOT);
+   // apiReturnSuccess($ajax, SITE_ROOT );
 }
 
 

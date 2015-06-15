@@ -60,6 +60,11 @@ if(isUserLoggedIn()) {
         </div>
 
     </form>
+    
+    <?php
+	session_start();
+	var_dump($_SESSION["userCakeUser"]);
+	?>
      
      	<!--<div class="formHolder">
         <div class="loginForm">
