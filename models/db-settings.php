@@ -30,10 +30,10 @@ THE SOFTWARE.
 */
 
 //Database Information
-$db_host = "gjosse.nl.mysql"; //Host address (most likely localhost)
-$db_name = "gjosse_nl"; //Name of Database
-$db_user = "gjosse_nl"; //Name of database user
-$db_pass = "bcJ7UEPx"; //Password for database user
+$db_host = "localhost"; //Host address (most likely localhost)
+$db_name = "minetribe"; //Name of Database
+$db_user = "gjosse"; //Name of database user
+$db_pass = "gjosseotto"; //Password for database user
 $db_table_prefix = "uf_"; // Change default "uf_" to something different (but still ending with an underscore) for better security
 
 // All SQL queries use PDO now

@@ -39,7 +39,7 @@ if(isUserLoggedIn()) {
         </center>
      </h1>
      
-     <form id="signup" role='form' name='login' action='api/process_login.php' method='post'>
+     <form id="signup" role='form' name='login' action='/api/process_login.php' method='post'>
 
         <div class="inputs">
         
