@@ -32,10 +32,10 @@ if(isset($_GET['user'])) {
 
 //After that whole script we will get the stats now.
 
-$servername = "gjosse.nl.mysql";
-$usernameDB = "gjosse_nl";
-$password = "bcJ7UEPx";
-$dbname = "gjosse_nl";
+$servername = "localhost";
+$usernameDB = "gjosse";
+$password = "gjosseotto";
+$dbname = "minetribe";
 
 $conn = new mysqli($servername, $usernameDB, $password, $dbname);
 if ($conn->connect_error) {
