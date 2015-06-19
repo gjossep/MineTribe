@@ -38,14 +38,13 @@
 	
 }
 
-
 .background {
-	background:url(img/backgroundpricetable.png);
-	background-repeat: no-repeat;
-	background-attachment:fixed;
-	background-position: center bottom;
+   background:url(img/backgroundpricetable.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
-
 </style>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,10 +53,9 @@
       <script src="js/respond.min.js"></script>
       <![endif]-->
 </head>
-    <body background="img/backgroundpricetable.png">
+    <body class="background">
        
 <div class="container">
-      <h1 class="page-header">Join MineTribe</h1>
       <p>&nbsp;</p>
       <div class="row flat">
     <div class="col-lg-3 col-md-3 col-xs-6">
