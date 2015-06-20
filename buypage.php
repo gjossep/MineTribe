@@ -50,6 +50,18 @@
 .info:hover {
 opacity:0.9;	
 }
+
+.background .container .row.flat .col-lg-3.col-md-3.col-xs-6 {
+	width: 50%;
+    margin: 0 auto;
+}
+
+.background .container .row.flat .col-lg-3.col-md-3.col-xs-6 .plan.plan3 {
+	position:static;
+}
+.background .container .row.flat .col-lg-3.col-md-3.col-xs-6 .plan.plan1 {
+	position:static;
+}
 </style>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -61,27 +73,10 @@ opacity:0.9;
     <body class="background">
 <div class="container">
   <div class="logo">
-  <img src="img/logo-version.png" alt="logo" width="100%" height="auto">
+  <img src="img/logo-version.png" alt="logo" width="100%" height="auto" >
   </div>
   <p>&nbsp;</p>
       <div class="row flat">
-    <div class="col-lg-3 col-md-3 col-xs-6">
-          <ul class="plan plan1">
-        <li class="plan-name"> Tribesmen </li>
-        <li class="plan-price"> <strong>Free</strong> </li>
-        <li> <strong>Messaging</strong> No Limit </li>
-        <li> <strong>Statistics</strong> </li>
-        <li> <strong>Adding Friends</strong> No Limit
-            <li> <strong>Create a Tribe</strong> Limited Members </li>
-        <li> <strong>Customize Tribe Page</strong> Limited </li>
-        </li>
-            <li> <strong>Profile</strong></li>
-        </li>
-            <li> <strong>Upgrade at any time</strong> </li>
-        </li>
-        <li class="plan-action"> <a href="/register.php" class="btn btn-danger btn-lg">Register</a> </li>
-      </ul>
-        </div>
     <div class="col-lg-3 col-md-3 col-xs-6">
           <ul class="plan plan3">
         <li class="plan-name"> Oulad </li>
@@ -93,17 +88,35 @@ opacity:0.9;
         <li> <strong>Tribe Ranking</strong> Add levels of ranking </li>
         <li> <strong>Tribe Members</strong> Unlimited </li>
         <li> <strong>Remove Ads</strong> </li>
-        <li class="plan-action"> <a href="#" class="btn btn-danger btn-lg">Register</a> </li>
+         <li></li>
+         
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="DWXJJSARWLL7W">
+<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_cc_171x47.png" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
       </ul>
         </div>
     <div class="col-lg-3 col-md-3 col-xs-6">
-          <ul class="plan plan2 featured">
+          <ul class="plan plan1">
         <li class="plan-name"> Khanewar </li>
         <li class="plan-price"> <strong>$6</strong> / monthly subscription </li>
         <li> <strong>All Perks</strong> </li>
         <li> <strong>Khanewar Titel infront of your name</strong> </li>
         <li> <strong>Join up to 3 Tribes</strong> </li>
-        <li class="plan-action"> <a href="#" class="btn btn-danger btn-lg">Register</a> </li>
+ <li></li>
+ 
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5ZASMGQAXTX74">
+<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_cc_171x47.png" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
       </ul>
         </div>
   </div>
