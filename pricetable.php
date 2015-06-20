@@ -144,7 +144,6 @@ opacity:0.9;
 
 
     </div>     
-    <?php require('phpfiles/footer.php'); ?>
 
 </body>
 </html>
