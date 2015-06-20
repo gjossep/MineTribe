@@ -140,8 +140,8 @@ $conn->close();
 	for($i = 0; $i <19; $i++) {
 		echo "<tr>";
 		
-			echo "<td>servers</td>";
-			echo "<td>ip</td>";
+			echo "<td>overall rank</td>";
+			echo "<td>tribe</td>";
 			
 			echo "</tr>";
 			

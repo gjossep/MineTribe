@@ -43,7 +43,8 @@ body {
 	background-image: url(/img/backgroundfriends.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center bottom;
+	background-position:center bottom;
+	background-size:100%;
 }
 
 table {
@@ -53,7 +54,6 @@ header {
     background-image:none;
 	background-color:#0A5025;
 }
-
     </style>
 	</head>
 	<body>
