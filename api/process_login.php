@@ -130,7 +130,7 @@ if(count($errors) == 0)
                 $loggedInUser->displayname = $userdetails["display_name"];
                 $loggedInUser->username = $userdetails["user_name"];
                 $loggedInUser->alerts = array();
-				$loggedInUser->stats = $userdetails["stats"];
+				//$loggedInUser->stats = $userdetails["stats"];
                 
                 //Update last sign in
                 $loggedInUser->updateLastSignIn();
@@ -152,7 +152,6 @@ if(count($errors) == 0)
                 $loggedInUser->csrf_token(true);
                 
                 $_SESSION["userCakeUser"] = $loggedInUser;
-                echo "User: ".$loggedInUser->username;
                 $successes = array();
                 $successes[] = "Welcome back, " . $loggedInUser->displayname;
             }
@@ -170,9 +169,9 @@ foreach ($successes as $success){
 }
 
 if (count($errors) > 0){
-    apiReturnError($ajax, SITE_ROOT . "/login.php?error=".$error);
+    apiReturnError($ajax, SITE_ROOT . "login.php?error=".$error);
 } else {
-   // apiReturnSuccess($ajax, SITE_ROOT );
+    apiReturnSuccess($ajax, SITE_ROOT );
 }
 
 

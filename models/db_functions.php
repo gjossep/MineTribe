@@ -376,8 +376,7 @@ function fetchUserAuth($column, $data){
             sign_up_stamp,
             last_sign_in_stamp,
             enabled,
-            primary_group_id,
-			stats
+            primary_group_id
             FROM ".$db_table_prefix."users
             WHERE
             $column = :data
@@ -946,7 +945,7 @@ function addUser($user_name, $display_name, $title, $password, $email, $active, 
             :password,
             :email,
             :activation_token,
-			:stats
+			:stats,
             '".time()."',
             '0',
             '".time()."',

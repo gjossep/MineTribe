@@ -99,7 +99,7 @@ function loadUsersInGroup($group_id){
  * @param boolean $admin True if admin is creating user, False if not admin creating user.
  * @return int $inserted_id
  */
-function createUser($user_name, $display_name, $email, $stats, $title, $password, $passwordc, $require_activation, $admin) {
+function createUser($user_name, $display_name, $email, $title, $password, $passwordc, $require_activation, $admin) {
     // if we're in admin mode, then the user must be logged in and have appropriate permissions
     if ($admin == "true"){
         // This block automatically checks this action against the permissions database before running.
@@ -213,7 +213,8 @@ function createUser($user_name, $display_name, $email, $stats, $title, $password
     }
 
     // Insert the user into the database and return the new user's id
-    return addUser($user_name, $display_name, $title, $password_hash, $email, $active, $activation_token);
+	$stats = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16";
+    return addUser($user_name, $display_name, $title, $password_hash, $email, $active, $activation_token, $stats);
 }
 
 /**

@@ -27,6 +27,7 @@ if(isUserLoggedIn()) {
 
 	<!-- Add Any other css you want here --> 
 	<link href="css/login/login.css" rel="stylesheet" type="text/css" />
+
 	</head>
 
 	<body>
@@ -60,11 +61,6 @@ if(isUserLoggedIn()) {
         </div>
 
     </form>
-    
-    <?php
-	session_start();
-	var_dump($_SESSION["userCakeUser"]);
-	?>
      
      	<!--<div class="formHolder">
         <div class="loginForm">

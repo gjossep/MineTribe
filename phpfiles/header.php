@@ -2,13 +2,12 @@
 
 require_once("models/config.php");
 
-setReferralPage(getAbsoluteDocumentPath(__FILE__));
-
 
 if(isUserLoggedIn()) { 
 ?>
 
     <!-- Navigation -->
+    <link rel="icon" type="img/ico" href="img/favicon.png">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
