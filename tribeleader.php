@@ -36,8 +36,8 @@ require_once("models/config.php");
 	background:#666;
 }
     .tribe h1 {
-	color: #C00;
-	background-color: #000;
+	color: #FFF;
+	background-color: #C00;
 	padding-top: 20px;
 	padding-bottom:20px;
 }
@@ -60,6 +60,10 @@ body {
 	background-color: #990001;
 	padding-top:10px;
 	padding-bottom:10px;
+}
+header {
+    background-image:none;
+	background-color:#C00;
 }
     </style>
     

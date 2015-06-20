@@ -48,6 +48,11 @@ body {
 	background-position: center bottom;
 }
 
+header {
+    background-image:none;
+	background-color:#FF9832;	
+}
+
     </style>
 	</head>
 	<body>

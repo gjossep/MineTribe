@@ -49,6 +49,10 @@ body {
 table {
 	  border-bottom: 2px solid #990001;
 }
+header {
+    background-image:none;
+	background-color:#0A5025;
+}
 
     </style>
 	</head>
@@ -62,11 +66,7 @@ table {
         </center>
       </h1>
     </div>
-    
-<div class="info">
-<h5> <center><b>Looking for a friend? Search them below!</b></center>
-<center><b>Can't find your friend? Invite them to MineTribe!</b></center></h5>
-</div>  
+   
 
 <?php
 
@@ -137,6 +137,12 @@ $conn->close();
 
 <!--<script src="js/statstable.js"></script>
 -->
+
+<div class="info">
+<h5> <center><b>Looking for a friend? Search them below!</b></center>
+<center><b>Can't find your friend? Invite them to MineTribe!</b></center></h5>
+</div>  
+
     <div class="footer">
 	<?php require('phpfiles/footer.php'); ?>
 	</div>

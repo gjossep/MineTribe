@@ -26,6 +26,7 @@
 	border-radius: 10px;
 	line-height: 10px;
 	padding-top: 5px;
+	opacity:.5;
 }
 
 .container h1 {
@@ -46,8 +47,8 @@
 	background-size: cover;
 }
 
-
-.background .container .logo img {
+.info:hover {
+opacity:0.9;	
 }
 </style>
 

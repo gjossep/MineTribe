@@ -40,6 +40,10 @@
 table {
 	  border-bottom: 2px solid #06F;
 }
+header {
+    background-image:none;
+	background-color:#000;
+}
 
     </style>
 	</head>
