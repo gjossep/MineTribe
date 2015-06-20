@@ -200,9 +200,11 @@
                       </li>
                         <li class="timeline-inverted">
                           <div class="timeline-image">
-                                <h4><a href="/pricetable.php" title="register" target="_self">BE A PART OF OUR COMMUNITY!</a></h4>
+                          <a href="pricetable.php">
+                                <img class="img-circle img-responsive" src="img/about/5.jpg" alt="register">
+                                </a>
                                
-                            </div>
+                          </div>
                         </li>
                     </ul>
                 </div>
@@ -225,10 +227,6 @@
                         <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
                         <h4>Otto</h4>
                         <p class="text-muted">Sanchezdebeast</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="https://www.facebook.com/minetribeofficial/timeline" targe="_blank"><i class="fa fa-facebook"></i></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -236,13 +234,6 @@
                         <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
                         <h4>Gjosse</h4>
                         <p class="text-muted">Gjosse</p>
-                        <ul class="list-inline social-buttons">
-                          <li><a href="http://dev.bukkit.org/profiles/gjosse"><i class="fa fa-facebook"></i></a>
-                            </li>
-                          <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-facebook"></i></a>
-                       
-                            </li>
-                        </ul>
                     </div>
                 </div>
             <div class="row">
