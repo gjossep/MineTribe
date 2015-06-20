@@ -45,11 +45,9 @@
 	-o-background-size: cover;
 	background-size: cover;
 }
-.background .container .logo {
-    -webkit-background-size: cover; /* Add in these */
-    -moz-background-size: cover;    /* four lines to */
-    -o-background-size: cover;      /* remove the white space*/
-    background-size: cover;         /* around images */
+
+
+.background .container .logo img {
 }
 </style>
 
@@ -62,7 +60,7 @@
     <body class="background">
 <div class="container">
   <div class="logo">
-  <img src="img/logo-version.png" alt="logo">
+  <img src="img/logo-version.png" alt="logo" width="60%" height="auto">
   </div>
   <p>&nbsp;</p>
       <div class="row flat">
