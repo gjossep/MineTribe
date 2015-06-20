@@ -83,10 +83,10 @@ header {
 
 <?php
 
-$servername = "gjosse.nl.mysql";
-$username = "gjosse_nl";
-$password = "bcJ7UEPx";
-$dbname = "gjosse_nl";
+$servername = "localhost";
+$username = "gjosse";
+$password = "Rcw#1mcs";
+$dbname = "minetribe";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

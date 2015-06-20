@@ -237,9 +237,10 @@
                         <h4>Gjosse</h4>
                         <p class="text-muted">Gjosse</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="http://dev.bukkit.org/profiles/gjosse/"><i class="fa fa-twitter"></i></a>
+                          <li><a href="http://dev.bukkit.org/profiles/gjosse"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="https://www.facebook.com/minetribeofficial/timeline"><i class="fa fa-facebook"></i></a>
+                          <li><a href="https://www.facebook.com/minetribeofficial?ref=hl"><i class="fa fa-facebook"></i></a>
+                       
                             </li>
                         </ul>
                     </div>

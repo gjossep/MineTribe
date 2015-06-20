@@ -34,7 +34,7 @@ if(isset($_GET['user'])) {
 
 $servername = "localhost";
 $usernameDB = "gjosse";
-$password = "gjosseotto";
+$password = "Rcw#1mcs";
 $dbname = "minetribe";
 
 $conn = new mysqli($servername, $usernameDB, $password, $dbname);
@@ -316,6 +316,10 @@ while($row = $result->fetch_assoc()) {
    #portfolio .row h3 b {
 	color: #066;
 }
+   #contact .table {
+	padding-right: 30px;
+	padding-left: 30px;
+}
    </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -427,7 +431,7 @@ while($row = $result->fetch_assoc()) {
                   			<div class="tab-pane" id="profile">
 					 		<h2><center>A lone wolf :(</center></h2>
 							<hr />
-					 		<img src="img/tribecover/notribe.jpg" alt="tribedefault" height="200" width="330"/>
+					 		<h4> <center> This user doesn't belong to a tribe! </center> </h4>
 							<hr />
               
                             <!--if user has tribe-->
@@ -442,7 +446,7 @@ while($row = $result->fetch_assoc()) {
 						    <div class="tab-pane" id="profile">
 					 		<h2><center>A lone wolf :(</center></h2>
 							<hr />
-					 		<img src="img/tribecover/notribe.jpg" alt="tribedefault" height="200" width="330"/>
+					 		<h4> <center> This user doesn't belong to a tribe! </center> </h4>
 							<hr />
          	
                             <!--if user has tribe-->
@@ -574,23 +578,11 @@ while($row = $result->fetch_assoc()) {
                         <td>
                             Player Name
                         </td>
-                        <td >
-                            Player Name
-                        </td>
-           			    <td >
-                            Player Name
-                        </td>
                     </tr>
                     <tr>
                         <td >
-                            friend
+                            Player Name
                         </td>
-                        <td>
-                            friend
-                        </td>
-           				<td>
-                            friend
-                        </td>     
                      </tr>                                                                    
                 </table>
                 <hr />

@@ -97,6 +97,7 @@ opacity:0.9;
 <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+<hr>
 
       </ul>
         </div>

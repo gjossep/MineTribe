@@ -63,7 +63,7 @@ header {
 
 $servername = "localhost";
 $username = "gjosse";
-$password = "gjosseotto";
+$password = "Rcw#1mcs";
 $dbname = "minetribe";
 
 // Create connection
