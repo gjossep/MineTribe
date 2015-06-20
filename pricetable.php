@@ -45,6 +45,12 @@
 	-o-background-size: cover;
 	background-size: cover;
 }
+.background .container .logo {
+    -webkit-background-size: cover; /* Add in these */
+    -moz-background-size: cover;    /* four lines to */
+    -o-background-size: cover;      /* remove the white space*/
+    background-size: cover;         /* around images */
+}
 </style>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,9 +60,11 @@
       <![endif]-->
 </head>
     <body class="background">
-       
 <div class="container">
-      <p>&nbsp;</p>
+  <div class="logo">
+  <img src="img/logo-version.png" alt="logo">
+  </div>
+  <p>&nbsp;</p>
       <div class="row flat">
     <div class="col-lg-3 col-md-3 col-xs-6">
           <ul class="plan plan1">
