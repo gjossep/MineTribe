@@ -49,10 +49,10 @@ body {
 table {
 	  border-bottom: 2px solid #990001;
 }
-header {
+/*header {
     background-image:none;
 	background-color:#135714;
-}
+}*/
     </style>
 	</head>
 	<body>

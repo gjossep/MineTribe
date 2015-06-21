@@ -47,11 +47,12 @@ body {
 	background-attachment: fixed;
 	background-position: center top;
 }
+  
 
-header {
+/*header {
     background-image:none;
 	background-color:#F63;	
-}
+}*/
 
     </style>
 	</head>
@@ -61,7 +62,7 @@ header {
     <div class="tribe">
       <h1>
         <center>
-          Servers using MineTribe Plugin
+          Servers using MineTribe-Statistics
         </center>
       </h1>
     </div>

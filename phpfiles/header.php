@@ -76,7 +76,7 @@ if(isUserLoggedIn()) {
                         <a class="page-scroll" href="/login.php">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/pricetable.php">Register</a>
+                        <a class="page-scroll" href="/register.php">Register</a>
                     </li>
                 </ul>
             </div>
@@ -91,7 +91,7 @@ if(isUserLoggedIn()) {
     <header>
         <div class="container">
             <div class="intro-text">
-				<img src="/img/logo-version.png" alt="this is the logo">
+				<img src="/img/logo-version.png" alt="this is the logo" width="auto" height="auto">
             </div>
         </div>
         

@@ -61,10 +61,10 @@ body {
 	padding-top:10px;
 	padding-bottom:10px;
 }
-header {
+/*header {
     background-image:none;
 	background-color:#920000;
-}
+}*/
     </style>
     
 	</head>
