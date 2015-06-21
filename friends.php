@@ -18,25 +18,30 @@
 		}
 	.tribe h1 center {
 	color: #FFF;
-	background-color: #135714;
+	background-color: #074800;
 	padding-top: 20px;
 	padding-bottom:20px;
 }
+	.tribe h1 {
+	margin-top:0px;	
+	}
     .footer {
 	background-color: #CCC;
 	color:#000;
 	
 }
     .info h5 {
-	color: #999;
+	color: #FFF;
 	background-color: #135714;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 	table th {
   	background: #093;
 	color:#FFF;
+	width:50%;
 }
 
 body {

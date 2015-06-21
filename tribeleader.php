@@ -40,6 +40,7 @@ require_once("models/config.php");
 	background-color: #920000;
 	padding-top: 20px;
 	padding-bottom:20px;
+	margin-top:0px;
 }
 
 body {
@@ -60,6 +61,7 @@ body {
 	background-color: #920000;
 	padding-top:10px;
 	padding-bottom:10px;
+	margin-bottom: 0px;
 }
 /*header {
     background-image:none;

@@ -22,6 +22,9 @@
 	padding-top: 20px;
 	padding-bottom:20px;
 }
+	.tribe h1 {
+		margin-top:0px;	
+	}
     .footer {
 	background-color: #CCC;
 	
