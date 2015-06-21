@@ -41,24 +41,23 @@ if(isUserLoggedIn()) {
      </h1>
      
      <form id="signup" role='form' name='login' action='/api/process_login.php' method='post'>
-			<div id='display-alerts' class="col-lg-12">
-  			<?php 
+       <div id='display-alerts' class="col-lg-12">
+         <?php 
 				if(isset($_GET['error'])) {
 					echo "<div class='alert alert-danger'>";
 						echo $_GET['error'];
 					echo "</div>";
 				}
 			?>
-			</div>
-        <div class="inputs">
-        
-            <input type="text" name="username" placeholder="Username" />
+       </div>
+       <div class="inputs">
+           <input type="text" name="username" placeholder="Username" />
         
             <input type="password" name="password" placeholder="Password" />
             
             <input type="submit" id="submit" value="Login" />
                     
-        </div>
+       </div>
 
     </form>
      

@@ -18,15 +18,15 @@
 	color: #000;
 	background-color: #FFF;
 	margin-top: 20px;
-	margin-right: 30%;
-	margin-left: 30%;
+	margin-right: 35%;
+	margin-left: 35%;
 	padding-left: 15px;
 	padding-right: 15px;
 	border: #E74C3C;
 	border-radius: 10px;
 	line-height: 10px;
 	padding-top: 5px;
-	opacity:.5;
+	opacity:.9;
 }
 
 .container h1 {
@@ -48,7 +48,7 @@
 }
 
 .info:hover {
-opacity:0.9;	
+opacity:1.0;	
 }
 </style>
 
@@ -63,7 +63,7 @@ opacity:0.9;
   <div class="logo">
   <img src="img/logo-version.png" alt="logo" width="100%" height="auto">
   </div>
-  <p>&nbsp;</p>
+  <h2> <a href="index.php"> Back</h2> </a>
       <div class="row flat">
     <div class="col-lg-3 col-md-3 col-xs-6">
           <ul class="plan plan1">

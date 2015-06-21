@@ -94,6 +94,7 @@
 body {
 	background-image: url(/img/backgroundlogin.jpg);
 	background-position: center center;
+
 }
 
 #signup {
@@ -111,7 +112,7 @@ body {
 
 #signup .inputs {
 	margin-top: 25px;
-	float: right;
+	float:none;
 }
 
 #signup .inputs label {
@@ -227,3 +228,5 @@ input:-moz-placeholder {
 	display: inline;
 	text-align: center;
 }
+
+

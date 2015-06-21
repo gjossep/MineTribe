@@ -200,9 +200,9 @@
                       </li>
                         <li class="timeline-inverted">
                           <div class="timeline-image">
-                          <a href="pricetable.php">
+                         
                                 <img class="img-circle img-responsive" src="img/about/5.jpg" alt="register">
-                                </a>
+                                
                                
                           </div>
                         </li>

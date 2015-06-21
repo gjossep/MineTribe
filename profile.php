@@ -66,11 +66,11 @@ while($row = $result->fetch_assoc()) {
 	$statDistanceSprinted = $stats[8];
 	$statDistanceSwum = $stats[9];
 	$statDistanceFall = $stats[10];
-	$statDistanceClimbed = $stats[11];
-	$statUnderWater = $stats[12];	
-	$statDistanceMinecart = $stats[13];
-	$statDistanceBoat = $stats[14];
-	$statJump = $stats[15];
+	$statDistanceClimbed = $stats[12];
+	$statUnderWater = $stats[13];	
+	$statDistanceMinecart = $stats[14];
+	$statDistanceBoat = $stats[15];
+	$statJump = $stats[11];
 	$statFishCaught = $stats[16];
 	
 }
@@ -560,7 +560,7 @@ while($row = $result->fetch_assoc()) {
                         <td>
                             <?php echo $statFishCaught; ?>
                         </td>
-                    </tr>                                                                                                                  
+                    </tr>                                                                                     
                 </table>
                 <hr />
             </div>
