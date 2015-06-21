@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Pricing Table</title>
+    <title>Register</title>
     <?php require('phpfiles/head.php'); ?>
     <!-- Bootstrap core CSS -->
     <link href="css/pricetable/bootstrap.min.css" rel="stylesheet">

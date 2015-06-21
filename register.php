@@ -22,7 +22,7 @@ if(isUserLoggedIn()) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Login</title>
+	<title>Register</title>
 	<?php require('phpfiles/head.php'); ?>
 
 	<!-- Add Any other css you want here -->

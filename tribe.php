@@ -10,7 +10,7 @@ require_once("models/config.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>tribepage</title>
+	<title>Tribe</title>
 	<!-- Add Any other css you want here -->
 	<link rel="stylesheet" href="chatjs-gh-pages/stylesheets/pygment_trac.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
