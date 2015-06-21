@@ -18,7 +18,7 @@
 		}
 	.tribe h1 center {
 	color: #FFF;
-	background-color: #F93;
+	background-color: #F63;
 	padding-top: 20px;
 	padding-bottom:20px;
 }
@@ -33,7 +33,7 @@
     
 	.info h5 {
 	color: #FFF;
-	background-color: #F93;
+	background-color: #F63;
 	padding-top:10px;
 	padding-bottom:10px;
 }
@@ -45,12 +45,12 @@ body {
 	background-image: url(/img/backgroundservers.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center bottom;
+	background-position: center top;
 }
 
 header {
     background-image:none;
-	background-color:#FF9832;	
+	background-color:#F63;	
 }
 
     </style>

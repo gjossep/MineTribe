@@ -7,7 +7,7 @@ if(isUserLoggedIn()) {
 ?>
 
     <!-- Navigation -->
-    <link rel="icon" type="img/ico" href="img/favicon.png">
+    <link rel="icon" type="img/ico" href="img/favicon.ico">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">

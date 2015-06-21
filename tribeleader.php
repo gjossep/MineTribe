@@ -25,11 +25,11 @@ require_once("models/config.php");
     		content: " \25B4\25BE"
 		}
 		table th {
-  			background: #990001;
+  			background: #CE000F;
 			color:#FFF
 		}
 		table {
-			  border-bottom: 2px solid #990001;
+			  border-bottom: 2px solid #B60000;
 		}
 		
     .sortable tr td img {
@@ -37,7 +37,7 @@ require_once("models/config.php");
 }
     .tribe h1 {
 	color: #FFF;
-	background-color: #C00;
+	background-color: #920000;
 	padding-top: 20px;
 	padding-bottom:20px;
 }
@@ -57,13 +57,13 @@ body {
    
     .info h5 {
 	color: #FFF;
-	background-color: #990001;
+	background-color: #920000;
 	padding-top:10px;
 	padding-bottom:10px;
 }
 header {
     background-image:none;
-	background-color:#C00;
+	background-color:#920000;
 }
     </style>
     

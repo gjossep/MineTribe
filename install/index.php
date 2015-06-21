@@ -9,7 +9,7 @@
 
     <title>Welcome to UserFrosting!</title>
 
-	<link rel="icon" type="image/x-icon" href="../css/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">

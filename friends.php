@@ -35,7 +35,7 @@
 }
 
 	table th {
-  	background: #03B600;
+  	background: #093;
 	color:#FFF;
 }
 
@@ -69,15 +69,15 @@ header {
 
 <?php
 
-$servername = "gjosse.nl.mysql";
-$username = "gjosse_nl";
-$password = "bcJ7UEPx";
-$dbname = "gjosse_nl";
+$servername = "localhost";
+$username = "gjosse";
+$password = "Rcw#1mcs";
+$dbname = "minetribe";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sql = "SELECT user_name, display_name, stats, rank FROM uf_users";
+$sql = "SELECT user_name, display_name";
 $result = $conn->query($sql);
 
 
@@ -88,6 +88,7 @@ $result = $conn->query($sql);
   <thead>
     <tr>
       <th>Player Name</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -96,17 +97,13 @@ $result = $conn->query($sql);
 	if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-		$statsRaw = $row["stats"];
-		$stats = explode(',', $statsRaw);
-		
-		if($row["rank"] != 0) {
-		
+	
 			echo "<tr>";
 		
-			echo "<td><a href='profile.php?user=".$row["user_name"]."'>".$row["display_name"]."</a></td>";
+			echo "<td><a href='".$row["user_name"]."'>".$row["display_name"]."</a></td>";
 		
 			echo "</tr>";
-		}
+		
 		
     }
 } 
@@ -118,7 +115,7 @@ $conn->close();
 			
 			echo "<tr>";
 		
-			echo "<td>Rank</td>";
+			echo "<td>names</td>";
 
 			echo "</tr>";
 			
