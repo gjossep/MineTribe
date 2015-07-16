@@ -347,8 +347,9 @@ while($row = $result->fetch_assoc()) {
     		<!-- ===== vCard Navigation ===== -->
     		<div class="row w">
     			<div class="col-md-4">
-         
-                <img src='<?php echo "www.minetribe.net/face.php?u=". echo $displayName; ?>.'/>
+                
+         		<?php echo('<img src="https://minotar.net/avatar/'.$displayName.'/100.png">'); ?>
+
                 <!--<img class="img-responsive" src="img/imgtheme/avatar.jpg" alt="avatar">-->
 					<ul class="nav nav-tabs nav-stacked" id="myTab">
 					  <li class="active"><a href="#about">Profile</a></li>
