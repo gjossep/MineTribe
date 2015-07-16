@@ -61,8 +61,6 @@ if(isUserLoggedIn()) {
 
     </form>
     <hr />
-    <iframe src="http://www.minetribe.net:3000" scrolling="no" height="80%" width="15%" frameborder="1"></iframe>
-     
      	<!--<div class="formHolder">
         <div class="loginForm">
           <form id="login" action="api/process_login.php" method="post">

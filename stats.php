@@ -62,7 +62,7 @@ table {
         </center>
       </h1>
     </div>
-<?php /*?><div>
+<div>
 
 <?php
 
@@ -152,9 +152,9 @@ $conn->close();
     
   </tbody>
 </table>
-</div><?php */?>     
+</div>     
 
-<iframe src="http://www.minetribe.net/receivestats.php" width="50%" height="650px" align="middle"></iframe>
+
 </div>
 <div class="info">
 <h5> <center><b>These are the overall stats, you can check the top rank of each skill by clicking on it.</b></center>
