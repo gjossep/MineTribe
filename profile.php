@@ -330,7 +330,7 @@ while($row = $result->fetch_assoc()) {
    	<?php require('phpfiles/head.php'); ?>
 	</head>
 
-	<body>
+	<body>	
     <?php require('phpfiles/header.php'); ?>
 
 
@@ -348,7 +348,7 @@ while($row = $result->fetch_assoc()) {
     		<div class="row w">
     			<div class="col-md-4">
                 
-         		<?php echo('<img src="https://minotar.net/avatar/'.$displayName.'/200.png">'); ?>
+         		<?php echo('<img src="https://minotar.net/avatar/'.$displayName.'/176.png">'); ?>
 
                 <!--<img class="img-responsive" src="img/imgtheme/avatar.jpg" alt="avatar">-->
 					<ul class="nav nav-tabs nav-stacked" id="myTab">

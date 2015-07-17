@@ -149,11 +149,16 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Bukkit Plugin</h4>
+                                    <hr>
                                     <h4 class="subheading">MineTribe Statistics</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">This is a plugin created by the developer Gjosse, it allows us to gain access to all the statistics of the users. However servers need to download the plugin to grant us access. So if you are lacking in statistics and ranking then maybe encourage a server you play on to download it!</p>
+                                    <hr>
+                                    <a href="https://www.facebook.com/minetribeofficial?ref=hl" target="_blank"> <img src="/img/bukkit.png" alt="bukkit" width="100" height="30" border="0">
+                       </a>
                                 </div>
+                              
                             </div>
                         </li>
                         <li class="timeline-inverted">
@@ -163,6 +168,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Buddy System</h4>
+                                    <hr>
                                     <h4 class="subheading">Friends and messaging platform.</h4>
                                 </div>
                                 <div class="timeline-body">
@@ -177,6 +183,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Tribes</h4>
+                                    <hr>
                                     <h4 class="subheading">Create tribes with friends.</h4>
                                 </div>
                                 <div class="timeline-body">
@@ -191,10 +198,15 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Community</h4>
+                                    <hr>
                                     <h4 class="subheading">Help us grow!</h4>
                               </div>
                                 <div class="timeline-body">
+                                
                                     <p class="text-muted">MineTribe is a rapidly growing community but it needs the help of the community! To make the statistics and tribes more competitive you need to get the MineTribe plugin on the servers you play. Otherwise your Tribe will struggle to grow if the servers you play on don't have the plugin!.</p>
+                                    <hr>
+                                    <a href="https://www.facebook.com/minetribeofficial?ref=hl" target="_blank"> <img src="/img/facebook.png" alt="facebook" width="130" height="30" border="0">
+                       </a>
                                 </div>
                           </div>
                       </li>

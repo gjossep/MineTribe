@@ -16,10 +16,12 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="privacypolicy.php" target="_blank">Privacy Policy</a>
+                        
+                    	<li><a href="https://www.facebook.com/minetribeofficial?ref=hl" target="_blank"> </a>
+                       <li><a href="termsofuse.php" target="_blank">Terms of Use</a></li>
+						<li><a href="privacypolicy.php" target="_blank">Privacy Policy</a>
                         </li>
-                        <li><a href="termsofuse.php" target="_blank">Terms of Use</a></li>
-						<li><a href="https://www.facebook.com/minetribeofficial?ref=hl" target="_blank">Facebook Page</a>
+                        
                    	 </li>   
                     </ul>
                 </div>
