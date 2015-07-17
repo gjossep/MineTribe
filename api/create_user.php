@@ -59,19 +59,19 @@ if ($admin == "true"){
   
   if (!userIdExists('1')){
 	  addAlert("danger", lang("MASTER_ACCOUNT_NOT_EXISTS"));
-	  apiReturnError($ajax, SITE_ROOT);
+	  //apiReturnError($ajax, SITE_ROOT);
   }
   
   // If registration is disabled, send them back to the home page with an error message
   if (!$can_register){
 	  addAlert("danger", lang("ACCOUNT_REGISTRATION_DISABLED"));
-	  apiReturnError($ajax, SITE_ROOT);
+	 // apiReturnError($ajax, SITE_ROOT);
   }
   
   //Prevent the user visiting the logged in page if he/she is already logged in
   if(isUserLoggedIn()) {
 	  addAlert("danger", "I'm sorry, you cannot register for an account while logged in.  Please log out first.");
-	  apiReturnError($ajax, ACCOUNT_ROOT);
+	  //apiReturnError($ajax, ACCOUNT_ROOT);
   }
     
 }
@@ -107,10 +107,10 @@ $error_count = count($validator->errors);
 
 // Check captcha and honeypot if not in admin mode
 if ($admin != "true"){
-    if (!$captcha || md5($captcha) != $_SESSION['captcha']){
+    /*if (!$captcha || md5($captcha) != $_SESSION['captcha']){
         addAlert("danger", lang("CAPTCHA_FAIL"));
         $error_count++;
-    }
+    }*/
   
     // Check the honeypot. 'spiderbro' is not a real field, it is hidden on the main page and must be submitted with its default value for this to be processed.
     if ($spiderbro != "http://"){
@@ -119,8 +119,10 @@ if ($admin != "true"){
         $error_count++;
     }     
 }
+echo "Errors: ".$error_count."\r\n";
 
 if ($error_count == 0){
+	echo "All recived data ok!"."\r\n";
     global $emailActivation;
 
 	// Use the global email activation setting unless we're told to skip it
@@ -131,9 +133,10 @@ if ($error_count == 0){
 	
 	// Try to create the new user
 	if ($new_user_id = createUser($user_name, $display_name, $email, $title, $password, $passwordc, $require_activation, $admin)){
-
+		echo "User created!"."\r\n";
 	} else {
-		apiReturnError($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
+		echo "Fail in creating the user!"."\r\n";
+		//apiReturnError($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
 	}
 	
 	// If creation succeeds, try to add groups
@@ -160,22 +163,28 @@ if ($error_count == 0){
 	// Otherwise, add default groups and set primary group for new users
 	} else {
 	  if (dbAddUserToDefaultGroups($new_user_id)){
-	  	if ($require_activation)
+	  	if ($require_activation) 
 		  // Activation required
-		  addAlert("success", lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE2"));
+		  echo "worked1"."\r\n";
+		 // addAlert("success", lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE2"));
 		else
 		  // No activation required
-		  addAlert("success", lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE1"));
+		  echo "worked2"."\r\n";
+		  //addAlert("success", lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE1"));
 	  } else {
-		apiReturnError($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
+		  echo "fail 11"."\r\n";
+		//apiReturnError($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
 	  }
 	}
 } else {
-	apiReturnError($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
+	echo "Main fail"."\r\n";
+	//apiReturnError($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
 }
 
+echo print_r($_SESSION["userAlerts"]);
+unset ($_SESSION['userAlerts']);
+
 restore_error_handler();
-  
-apiReturnSuccess($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
+//apiReturnSuccess($ajax, ($admin == "true") ? ACCOUNT_ROOT : SITE_ROOT);
 
 ?>

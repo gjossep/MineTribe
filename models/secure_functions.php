@@ -200,7 +200,7 @@ function createUser($user_name, $display_name, $email, $title, $password, $passw
         Instead to pass a message. */
         // If there is a mail failure, fatal error
         if(!$mailSender->newTemplateMsg("new-registration.txt",$hooks)) {
-            addAlert("danger", lang("MAIL_ERROR"));
+            addAlert("warning", lang("MAIL_ERROR"));
             return false;
         } else {
             //Send the mail. Specify users email here and subject.
@@ -213,8 +213,10 @@ function createUser($user_name, $display_name, $email, $title, $password, $passw
     }
 
     // Insert the user into the database and return the new user's id
-	$stats = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16";
-    return addUser($user_name, $display_name, $title, $password_hash, $email, $active, $activation_token, $stats);
+	$stats = "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16";
+	$rank = "0";
+	$friends = "None!";
+    return addUser($user_name, $display_name, $title, $password_hash, $email, $active, $activation_token, $stats, $rank, $friends);
 }
 
 /**

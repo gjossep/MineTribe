@@ -274,7 +274,7 @@ function fetchUser($user_id){
       $stmt->execute($sqlVars);
       
       if (!($results = $stmt->fetch(PDO::FETCH_ASSOC))){
-          addAlert("danger", "Invalid user id specified");
+          addAlert("danger", "Invalid user id specified1");
           return false;
       }
       
@@ -918,26 +918,65 @@ function updatePasswordFromToken($password, $current_token) {
 /*****************  User create and delete functions *******************/
 
 // Add a user to the database
-function addUser($user_name, $display_name, $title, $password, $email, $active, $activation_token, $stats){
+function addUser($user_name, $display_name, $title, $password, $email, $active, $activation_token, $stats, $rank, $friends){
     try {
         global $db_table_prefix;
         
         $db = pdoConnect();
-            
-        $query = "INSERT INTO ".$db_table_prefix."users (
-            user_name,
+         
+		$sql = "INSERT INTO ".$db_table_prefix."users (
+			user_name,
             display_name,
             password,
             email,
             activation_token,
-			stats,
             last_activation_request,
             lost_password_request,
             lost_password_timestamp,
             active,
             title,
             sign_up_stamp,
-            last_sign_in_stamp
+            last_sign_in_stamp,
+			stats,
+			rank,
+			friends)
+			
+			VALUES (
+				"."'".$user_name."'".",
+				"."'".$display_name."'".",
+				"."'".$password."'".",
+				"."'".$email."'".",
+				"."'".$activation_token."'".",
+				"."'".time()."'".",
+				'0',
+				"."'".time()."'".",
+				"."'".$active."'".",
+				"."'".$title."'".",
+				"."'".time()."'".",
+				'0',
+				"."'".$stats."'".",
+				"."'".$rank."'".",
+				"."'".$friends."'"."
+			)
+		
+		";
+		
+/*        $query = "INSERT INTO ".$db_table_prefix."users (
+            user_name,
+            display_name,
+            password,
+            email,
+            activation_token,
+            last_activation_request,
+            lost_password_request,
+            lost_password_timestamp,
+            active,
+            title,
+            sign_up_stamp,
+            last_sign_in_stamp,
+			stats,
+			rank,
+			friends,
             )
             VALUES (
             :user_name,
@@ -945,14 +984,16 @@ function addUser($user_name, $display_name, $title, $password, $email, $active, 
             :password,
             :email,
             :activation_token,
-			:stats,
             '".time()."',
             '0',
             '".time()."',
             :active,
             :title,
             '".time()."',
-            '0'
+            '0',
+			:stats,
+			:rank,
+			:friends
             )";
     
         $sqlVars = array(
@@ -963,18 +1004,22 @@ function addUser($user_name, $display_name, $title, $password, $email, $active, 
             ':email' => $email,
             ':active' => $active,
             ':activation_token' => $activation_token,
-			':stats' => $stats
-        );
-    
-        $stmt = $db->prepare($query);
-    
-        if (!$stmt->execute($sqlVars)){
+			':stats' => $stats,
+			':rank' => $rank,
+			':friends' => $friends
+        );*/
+		
+    	addAlert("danger", "query: ".$sql);
+        //$stmt = $db->prepare($sql);
+    	
+        if (!($db->exec($sql))){
             // Error: column does not exist
+			addAlert("danger", "Something went wrong with database!");
             return false;
         }
         
         $inserted_id = $db->lastInsertId();
-        
+        addAlert("info", "ID: ".$inserted_id);
         $stmt = null;
     
         return $inserted_id;
@@ -1005,7 +1050,7 @@ function updateUserField($user_id, $field_name, $field_value){
 
 		// Check that the user exists
 		if (!userIdExists($user_id)){
-          addAlert("danger", "Invalid user id specified.");
+          addAlert("danger", "Invalid user id specified2.");
           return false;		
 		}
 		
@@ -1053,7 +1098,7 @@ function removeUser($user_id){
       $stmt_user = $db->prepare($query_user);
       
       if (!($stmt_user->execute($sqlVars))){
-          addAlert("danger", "Invalid user id specified");
+          addAlert("danger", "Invalid user id specified3");
           return false;
       }
       
@@ -1074,7 +1119,7 @@ function removeUser($user_id){
       if ($stmt_user->rowCount() > 0)
           return true;
       else {
-          addAlert("danger", "Invalid user id specified.");
+          addAlert("danger", "Invalid user id specified4.");
           return false;
       }
       
