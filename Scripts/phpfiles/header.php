@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../Account/models/config.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/Account/models/config.php");
 
 
 if(isUserLoggedIn()) { 
