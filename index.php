@@ -10,7 +10,7 @@
 
     <title>MineTribe</title>
 
-<?php require('phpfiles/head.php'); ?>
+<?php require('Scripts/phpfiles/head.php'); ?>
 
 <!-- Add Any other css you want here -->
 
@@ -24,7 +24,7 @@
 </head>
 
 <body id="page-top" class="index">
-<?php require('phpfiles/header.php'); ?>
+<?php require('Scripts/phpfiles/header.php'); ?>
 
     <!-- Services Section -->
     <section id="services">
@@ -41,7 +41,7 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                     <a href="tribeleader.php"> <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
+                     <a href="Pages/tribeleader.php"> <img src="img/tribesicon.png" width="273" height="181" alt="tribe"> </a>
                     </div>
                   <h4 class="service-heading">Tribes</h4>
                     <p class="text-muted">Find out what other tribes are out there! See how you are doing with your tribe compared to other tribes, or if you are looking for a tribe then check if anyone is recruiting!</p>
@@ -51,14 +51,14 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <div class="icons">
-                    <a href="stats.php"><img src="img/statsicon.png" width="257" height="181" alt="tribe"></a> 
+                    <a href="Pages/stats.php"><img src="img/statsicon.png" width="257" height="181" alt="tribe"></a> 
                     </div>
                   <h4 class="service-heading">Stats</h4>
                     <p class="text-muted">Check your minecraft ranking with the other players on this site and your friends! (Are your statistics not as high as they should be? Maybe the server you are playing on doesn't have the MineTribe plugin yet!)</p>
                 </div>
                 <div class="col-md-4">
                    <div class="icons3">
-                   <a href="friends.php"><img src="img/leadericons.png" width="257" height="181" alt="tribe"> </a>
+                   <a href="Pages/friends.php"><img src="img/leadericons.png" width="257" height="181" alt="tribe"> </a>
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
@@ -257,7 +257,7 @@
     </section>
     
     
-<?php require('phpfiles/footer.php'); ?>
+<?php require('Scripts/phpfiles/footer.php'); ?>
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
@@ -430,18 +430,18 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="Scripts/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="Scripts/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="Scripts/js/classie.js"></script>
+    <script src="Scripts/js/cbpAnimatedHeader.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+    <script src="Scripts/js/agency.js"></script>
 
 </body>
 

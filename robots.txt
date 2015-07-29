@@ -11,4 +11,4 @@ Disallow: /fonts/
 Disallow: /install/
 Disallow: /css/
 Disallow: /privatemessages/
-Sitemap: http://www.domain.com/sitemap.xml
+Sitemap: http://www.minetribe.net/sitemap.xml
