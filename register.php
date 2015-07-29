@@ -25,6 +25,7 @@ if(isUserLoggedIn()) {
 	<title>Register</title>
     
     <script>
+	//Changed the script a bit to make it faster.
 	function register() {	
 
 		
