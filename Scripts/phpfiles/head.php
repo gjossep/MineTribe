@@ -1,12 +1,12 @@
 
     <!-- Bootstrap Core CSS -->
-    <link href="../../phpfiles/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="../../Main CSS/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Custom CSS -->
-    <link href="../../phpfiles/css/agency.css" rel="stylesheet"/>
+    <link href="../../Main CSS/css/agency.css" rel="stylesheet"/>
     
     <!-- Custom Fonts -->
-    <link href="../../phpfiles/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../Main CSS/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'/>

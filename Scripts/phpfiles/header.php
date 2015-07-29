@@ -1,13 +1,13 @@
 <?php
 
-require_once("../../phpfiles/models/config.php");
+require_once("../../Account/models/config.php");
 
 
 if(isUserLoggedIn()) { 
 ?>
 
     <!-- Navigation -->
-    <link rel="icon" type="img/ico" href="../../phpfiles/img/favicon.ico">
+    <link rel="icon" type="img/ico" href="../../Main CSS/favicon.ico">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
